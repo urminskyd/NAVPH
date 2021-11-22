@@ -3,7 +3,7 @@ using UnityEngine;
 public class MainPlayer : MonoBehaviour
 {
     private float walkSpeed = 2.2F;
-    private float runSpeed = 3.0F;
+    private float runSpeed = 3.5F;
 
     private bool isRunning = false;
     private Vector3 moveDirection = Vector3.zero;
