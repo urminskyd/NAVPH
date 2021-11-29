@@ -1,25 +1,38 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class CanvasScript : MonoBehaviour
 {
-    public Text timeText;
-    public Text aliveText;
-    public Text deadText;
-    public Text rescuedText;
-
-    public float timeRemaining;
-    private int alive = 5;
-    private int dead = 0;
-    private int rescued = 0;
+    public static bool isPaused = false;
+    public GameObject pauseMenuUI;
 
     void Update()
     {
-        timeRemaining = timeRemaining > 0 ? timeRemaining - Time.deltaTime : 60;
-        timeText.text = "time till another hostage dies \n" + (int)timeRemaining;
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isPaused)
+                Resume();
+            else
+                Pause();
+        }
+    }
 
-        aliveText.text = "Alive: " + alive;
-        deadText.text = "Dead: " + dead;
-        rescuedText.text = "RescuedText: " + rescued;
+    public void Resume()
+    {
+        isPaused = false;
+        pauseMenuUI.SetActive(isPaused);
+        Time.timeScale = 1f; //unfreeze game
+    }
+
+    void Pause()
+    {
+        isPaused = true;
+        pauseMenuUI.SetActive(isPaused);
+        Time.timeScale = 0; //freeze game
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("QUIT");
+        Application.Quit();
     }
 }

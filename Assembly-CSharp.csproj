@@ -53,11 +53,13 @@
     <UnityVersion>2020.3.19f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets/MainMenu.cs" />
     <Compile Include="Assets/Zombie.cs" />
     <Compile Include="Assets/CameraFollow.cs" />
-    <Compile Include="Assets/CanvasScript.cs" />
+    <Compile Include="Assets/GameUiScript.cs" />
     <Compile Include="Assets/MainPlayer.cs" />
-    <Compile Include="Assets/MainMenu.cs" />
+    <Compile Include="Assets/CanvasScript.cs" />
+    <Compile Include="Assets/StatsScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
