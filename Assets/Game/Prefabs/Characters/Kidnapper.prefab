@@ -2511,8 +2511,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6584183472758455488}
   - component: {fileID: 3879204816523055546}
-  - component: {fileID: 2172145922232327999}
-  - component: {fileID: 2172145922232327998}
+  - component: {fileID: 5465372016667170704}
   m_Layer: 0
   m_Name: Kidnapper
   m_TagString: Untagged
@@ -2568,25 +2567,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!143 &2172145922232327999
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7855665484305600211}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 0
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.55, z: 0}
---- !u!114 &2172145922232327998
+--- !u!114 &5465372016667170704
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2595,9 +2576,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7855665484305600211}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2d45c61091ad4ee999c65e6edee9003, type: 3}
+  m_Script: {fileID: 11500000, guid: b6a49cd68386d4c2ebc8cb33e9d7d59d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  kidnapper: {fileID: 0}
+  allowedSpeed: 1
+  gameOverDistance: 0.5
 --- !u!1 &8014412341850883009
 GameObject:
   m_ObjectHideFlags: 0

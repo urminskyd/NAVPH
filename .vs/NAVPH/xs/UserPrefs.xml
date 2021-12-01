@@ -1,25 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PlayerFollow.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/NPC/HostageController.cs">
     <Files>
-      <File FileName="Assets/PlayerFollow.cs" Line="25" Column="1" />
+      <File FileName="Assets/Scripts/NPC/KidnapperController.cs" Line="27" Column="1" />
+      <File FileName="Assets/Scripts/NPC/HostageController.cs" Line="19" Column="10" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="NAVPH" expanded="True">
-            <Node name="Assembly-CSharp" expanded="True">
-              <Node name="Assets" expanded="True">
-                <Node name="PlayerFollow.cs" selected="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Addressable__Editor PreferredExecutionTarget="6680cea7-365f-4963-afc2-6c4b6b93b9d8" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6c18d1eb-88c7-4ef1-854b-ffa9e92ed904" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

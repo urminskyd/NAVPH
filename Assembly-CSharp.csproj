@@ -47,21 +47,21 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\MainMenu.cs" />
-     <Compile Include="Assets\Zombie.cs" />
-     <Compile Include="Assets\CanvasScript.cs" />
+     <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\UI\CanvasController.cs" />
+     <Compile Include="Assets\Scripts\NPC\HostageController.cs" />
      <Compile Include="Assets\AN Interactive Physical Door Pack\Scripts\AN_PlugScript.cs" />
-     <Compile Include="Assets\DoorScript.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerInteraction.cs" />
      <Compile Include="Assets\AN Interactive Physical Door Pack\Scripts\AN_HeroInteractive.cs" />
-     <Compile Include="Assets\CameraFollow.cs" />
-     <Compile Include="Assets\StatsScript.cs" />
+     <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\UI\EndGameStats.cs" />
      <Compile Include="Assets\AN Interactive Physical Door Pack\Scripts\AN_HeroController.cs" />
      <Compile Include="Assets\AN Interactive Physical Door Pack\Scripts\AN_Button.cs" />
-     <Compile Include="Assets\GameUiScript.cs" />
+     <Compile Include="Assets\Scripts\UI\InGameUI.cs" />
      <Compile Include="Assets\AN Interactive Physical Door Pack\Scripts\AN_DoorKey.cs" />
-     <Compile Include="Assets\MainPlayer.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
      <Compile Include="Assets\AN Interactive Physical Door Pack\Scripts\AN_DoorScript.cs" />
-     <Compile Include="Assets\PlayerFollow.cs" />
+     <Compile Include="Assets\Scripts\NPC\KidnapperController.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -686,11 +686,6 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{93AE653D-F95C-FD53-90C7-48FA559E2DA8}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
     <ProjectReference Include="UMA_Content.csproj">
       <Project>{89853FEC-C9CE-50BF-8A49-C4C100CC0623}</Project>
       <Name>UMA_Content</Name>
