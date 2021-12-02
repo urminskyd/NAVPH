@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CanvasController : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class CanvasController : MonoBehaviour
 
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused)
@@ -28,6 +30,12 @@ public class CanvasController : MonoBehaviour
         isPaused = true;
         pauseMenuUI.SetActive(isPaused);
         Time.timeScale = 0; //freeze game
+    }
+
+    void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1;
     }
 
     public void QuitGame()
