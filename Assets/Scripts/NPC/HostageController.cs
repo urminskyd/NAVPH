@@ -4,15 +4,32 @@ public class HostageController : MonoBehaviour
 {
     public GameObject player;
     public GameObject hostage;
+    public GameObject hostageInteractPanel;
 
     public float allowedDistance;
     public float allowedSpeed;
-    public bool isFollowingAllowed = false;
+    private bool triggered = false;
+    private bool isFollowAllowed = false;
 
     private RaycastHit shot;
     private Vector3 playerPosition;
-    private Vector3 cubeTriggerPosition;
+    private Vector3 playerPositionRelativeToHostage;
     private Rigidbody rb;
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            triggered = true;
+            hostageInteractPanel.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+            hostageInteractPanel.SetActive(false);
+    }
 
     private void Start()
     {
@@ -21,15 +38,18 @@ public class HostageController : MonoBehaviour
 
     void Update()
     {
-        var qTo = Quaternion.LookRotation(player.transform.position - transform.position);
-        qTo = Quaternion.Slerp(transform.rotation, qTo, 10 * Time.deltaTime);
-        GetComponent<Rigidbody>().MoveRotation(qTo); //code to look at the player
+        var qTo = Quaternion.LookRotation(player.transform.position - hostage.transform.position);
+        qTo = Quaternion.Slerp(hostage.transform.rotation, qTo, 10 * Time.deltaTime);
+        hostage.GetComponent<Rigidbody>().MoveRotation(qTo); //code to look at the player
 
-        cubeTriggerPosition = player.transform.position - transform.parent.position;
+        playerPositionRelativeToHostage = player.transform.position - hostage.transform.position;
         playerPosition = player.transform.position - transform.position;
-        Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out shot);
+        Physics.Raycast(hostage.transform.position, hostage.transform.TransformDirection(Vector3.forward), out shot);
 
-        if (shot.distance >= allowedDistance && isFollowingAllowed)
+        if (Input.GetKeyDown(KeyCode.F))
+            isFollowAllowed = !isFollowAllowed;
+
+        if (shot.distance >= allowedDistance && triggered && isFollowAllowed)
         {
             allowedSpeed = 0.5f;
             //hostage.GetComponent<Animator>().Play("Z_Walk1_InPlace");
@@ -43,8 +63,8 @@ public class HostageController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Rigidbody parentRigidbody = transform.parent.GetComponent<Rigidbody>();
-        parentRigidbody.MovePosition(transform.parent.position + (cubeTriggerPosition * allowedSpeed * Time.deltaTime));
+        Rigidbody hostageRigidbody = hostage.transform.GetComponent<Rigidbody>();
+        hostageRigidbody.MovePosition(hostage.transform.position + (playerPositionRelativeToHostage * allowedSpeed * Time.deltaTime));
 
         rb.MovePosition(transform.position + (playerPosition * allowedSpeed * Time.deltaTime));
     }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Door
   - Hostage
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX
