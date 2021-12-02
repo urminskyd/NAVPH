@@ -1,0 +1,2 @@
+/Users/tomasroncak/Documents/NAVPH/obj/Debug/UMA_Core_Editor.csproj.AssemblyReference.cache
+/Users/tomasroncak/Documents/NAVPH/obj/Debug/UMA_Core_Editor.csproj.CoreCompileInputs.cache
