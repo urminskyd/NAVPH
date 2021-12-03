@@ -1,14 +1,24 @@
 ﻿<Properties StartupConfiguration="{24FDCB56-9E2A-C72A-BA20-2EEB18A6599E}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/NPC/HostageController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI/MainMenu.cs">
     <Files>
-      <File FileName="Assets/Scripts/NPC/KidnapperController.cs" Line="38" Column="34" />
-      <File FileName="Assets/Scripts/KidnapperSpawn.cs" Line="18" Column="104" />
-      <File FileName="Assets/Scripts/NPC/HostageController.cs" Line="56" Column="10" />
+      <File FileName="Assets/GameManager.cs" Line="45" Column="6" />
+      <File FileName="Assets/Scripts/UI/MainMenu.cs" Line="8" Column="78" />
+      <File FileName="Assets/Scripts/UI/CanvasController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UI/EndGameStats.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UI/InGameUI.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="NAVPH" expanded="True" selected="True" />
+          <Node name="NAVPH" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="UI" expanded="True">
+                  <Node name="MainMenu.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
@@ -16,7 +26,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Addressable__Editor PreferredExecutionTarget="6680cea7-365f-4963-afc2-6c4b6b93b9d8" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="5a94a2b3-da6f-4f5b-8792-95b0fb24463c" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6a9533ce-8b5f-4bfb-83a3-f23f79a244bd" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

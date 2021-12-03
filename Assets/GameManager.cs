@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 
@@ -10,6 +11,7 @@ public class GameManager : MonoBehaviour
     private static GameManager instance;
     public GameState gameState { get; private set; }
 
+    protected GameManager() {}
 
     public static GameManager Instance
     {
@@ -17,6 +19,8 @@ public class GameManager : MonoBehaviour
         {
             if (instance is null)
             {
+                DontDestroyOnLoad(instance);
+                instance = new GameManager();
                 Debug.LogError("Game manager is null");
             }
 
@@ -24,10 +28,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        instance = this;
+        Debug.Log("GameManager - Main menu");
+
+        SceneManager.LoadScene("Game", LoadSceneMode.Additive);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        instance = this;
+        //instance = this;
+        //Debug.Log("Loading");
     }
 
     // Update is called once per frame
@@ -35,9 +48,4 @@ public class GameManager : MonoBehaviour
     {
         
     }
-
-    //public void OnApplicationQuit()
-    //{
-    //    SimpleGameManager.instance = null;
-    //}
 }
