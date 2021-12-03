@@ -9,7 +9,9 @@ public class CanvasController : MonoBehaviour
     void Update()
     {
 
+        //Debug.Log("TEST");
         if (Input.GetKeyDown(KeyCode.Escape))
+
         {
             if (isPaused)
                 Resume();

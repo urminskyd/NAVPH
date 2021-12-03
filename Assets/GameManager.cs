@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
     public GameState gameState { get; private set; }
+    //public static bool isPaused = false;
+    //public GameObject pauseMenuUI;
 
     protected GameManager() {}
 
@@ -42,6 +44,20 @@ public class GameManager : MonoBehaviour
         //SceneManager.LoadScene("Game", LoadSceneMode.Additive);
     }
 
+    //private void Resume()
+    //{
+    //    isPaused = false;
+    //    pauseMenuUI.SetActive(isPaused);
+    //    Time.timeScale = 1f; //unfreeze game
+    //}
+
+    //private void Pause()
+    //{
+    //    isPaused = true;
+    //    pauseMenuUI.SetActive(isPaused);
+    //    Time.timeScale = 0; //freeze game
+    //}
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +68,13 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //if (Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    Debug.Log("TEST");
+        //    if (isPaused)
+        //        Resume();
+        //    else
+        //        Pause();
+        //}
     }
 }
