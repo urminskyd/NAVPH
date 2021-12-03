@@ -1,11 +1,11 @@
 ﻿<Properties StartupConfiguration="{24FDCB56-9E2A-C72A-BA20-2EEB18A6599E}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI/MainMenu.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GameManager.cs">
     <Files>
-      <File FileName="Assets/GameManager.cs" Line="45" Column="6" />
-      <File FileName="Assets/Scripts/UI/MainMenu.cs" Line="8" Column="78" />
-      <File FileName="Assets/Scripts/UI/CanvasController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/UI/EndGameStats.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UI/EndGameStats.cs" Line="1" Column="1" IsPinned="True" />
+      <File FileName="Assets/GameManager.cs" Line="33" Column="1" />
+      <File FileName="Assets/Scripts/UI/MainMenu.cs" Line="8" Column="30" />
       <File FileName="Assets/Scripts/UI/InGameUI.cs" Line="1" Column="1" />
+      <File FileName="Assets/DoorController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,10 +13,9 @@
           <Node name="NAVPH" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="UI" expanded="True">
-                  <Node name="MainMenu.cs" selected="True" />
-                </Node>
+                <Node name="UI" expanded="True" />
               </Node>
+              <Node name="GameManager.cs" selected="True" />
             </Node>
           </Node>
         </State>

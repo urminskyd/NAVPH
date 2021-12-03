@@ -28,12 +28,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void LoadScene(string scene)
+    {
+        SceneManager.LoadScene(scene);
+        //SceneManager.LoadScene(scene, LoadSceneMode.Additive);
+    }
+
     private void Awake()
     {
         instance = this;
         Debug.Log("GameManager - Main menu");
 
-        SceneManager.LoadScene("Game", LoadSceneMode.Additive);
+        //SceneManager.LoadScene("Game", LoadSceneMode.Additive);
     }
 
     // Start is called before the first frame update
