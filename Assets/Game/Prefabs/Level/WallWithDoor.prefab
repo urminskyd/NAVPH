@@ -1,37 +1,33 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!65 &6166297884776894735
-BoxCollider:
+--- !u!64 &839832393691938367
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6166297884676097852}
+  m_GameObject: {fileID: 2275079341800392634}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.88652, y: 0.90888596, z: 10.540384}
-  m_Center: {x: -2.9432375, y: -0.40540788, z: 5.2701926}
---- !u!95 &6166297884776894736
-Animator:
-  serializedVersion: 3
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 2cd7ec39396204aaaa6a97d32bd35172, type: 3}
+--- !u!64 &157304539902096753
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6166297884676097852}
+  m_GameObject: {fileID: 5946105174981187044}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a390044d5df7a48a583334c7a1e7965e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 2cd7ec39396204aaaa6a97d32bd35172, type: 3}
 --- !u!1 &6166297883622383669
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,6 +156,38 @@ Transform:
   m_Father: {fileID: 6166297883622383666}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6166297884776894735
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6166297884676097852}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.88652, y: 0.90888596, z: 10.540384}
+  m_Center: {x: -2.9432375, y: -0.40540788, z: 5.2701926}
+--- !u!95 &6166297884776894736
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6166297884676097852}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a390044d5df7a48a583334c7a1e7965e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8998506880046940170
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,6 +284,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e125ee33af41143b8becc869e2706998, type: 3}
+--- !u!1 &5946105174981187044 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7166259239455210438, guid: e125ee33af41143b8becc869e2706998, type: 3}
+  m_PrefabInstance: {fileID: 3600458475551534626}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2398518703287887039 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1206443419137854109, guid: e125ee33af41143b8becc869e2706998, type: 3}
@@ -623,6 +656,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e125ee33af41143b8becc869e2706998, type: 3}
+--- !u!1 &2275079341800392634 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7166259239455210438, guid: e125ee33af41143b8becc869e2706998, type: 3}
+  m_PrefabInstance: {fileID: 8998506880141704316}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7809025910758242017 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1206443419137854109, guid: e125ee33af41143b8becc869e2706998, type: 3}
