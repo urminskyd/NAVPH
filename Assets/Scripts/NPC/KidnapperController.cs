@@ -19,13 +19,14 @@ public class KidnapperController : MonoBehaviour
 
     void Update()
     {
-        PlayerPrefs.SetInt("gameOver", 0);
         transform.GetComponent<Animator>().Play("Z_Run_InPlace");
 
         qTo = Quaternion.LookRotation(player.transform.position - transform.position);
         qTo = Quaternion.Slerp(transform.rotation, qTo, 10 * Time.deltaTime);
 
         playerPosition = player.transform.position - transform.position;
+        playerPosition = playerPosition.normalized * allowedSpeed; //normalize vector, so hostage speed is not based on distance
+
         Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out shot);
 
         Debug.Log(shot.distance);
