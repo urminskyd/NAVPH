@@ -1,20 +1,28 @@
 ﻿<Properties StartupConfiguration="{24FDCB56-9E2A-C72A-BA20-2EEB18A6599E}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI/EndGameStats.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/NPC/HostageController.cs">
     <Files>
-      <File FileName="Assets/Scripts/UI/EndGameStats.cs" Line="1" Column="1" IsPinned="True" />
-      <File FileName="Assets/Scripts/UI/CanvasController.cs" Line="1" Column="1" />
-      <File FileName="Assets/GameManager.cs" />
-      <File FileName="Assets/Scripts/UI/MainMenu.cs" />
-      <File FileName="Assets/Scripts/UI/InGameUI.cs" />
-      <File FileName="Assets/DoorController.cs" />
-      <File FileName="Assets/Scripts/Player/PlayerController.cs" />
-      <File FileName="Assets/UMA/Examples/Physics Examples/Scripts/UMAShooter.cs" />
+      <File FileName="Assets/Scripts/NPC/HostageController.cs" Line="52" Column="34" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="NAVPH" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="NPC" expanded="True">
+                  <Node name="HostageController.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Addressable__Editor PreferredExecutionTarget="6680cea7-365f-4963-afc2-6c4b6b93b9d8" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9b1b1b7f-5ceb-44f9-94a3-424d920867e4" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9857424a-cca7-4036-bd15-03d9b142ea8c" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

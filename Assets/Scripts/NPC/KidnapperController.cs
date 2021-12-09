@@ -28,16 +28,12 @@ public class KidnapperController : MonoBehaviour
         playerPosition = player.transform.position - transform.position;
         Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out shot);
 
-        //Debug.Log(shot.distance);
+        Debug.Log(shot.distance);
         if (shot.distance > 0 && shot.distance <= gameOverDistance)
         {
             Debug.Log("GAME OVER." + gameOverDistance);
             transform.GetComponent<Animator>().Play("Z_Idle");
             Time.timeScale = 0; //freeze game
-
-            Debug.Log("Nastavujem gameOver na 1");
-            PlayerPrefs.SetInt("gameOver", 1);
-            
         }
         PlayerPrefs.Save();
     }

@@ -51,7 +51,7 @@ public class HostageController : MonoBehaviour
 
         if (shot.distance >= allowedDistance && triggered && isFollowAllowed)
         {
-            allowedSpeed = 0.5f;
+            allowedSpeed = 0.75f;
             //hostage.GetComponent<Animator>().Play("Z_Walk1_InPlace");
         }
         else
