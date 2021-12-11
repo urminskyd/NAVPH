@@ -35,6 +35,9 @@ public class KidnapperController : MonoBehaviour
             Debug.Log("GAME OVER." + gameOverDistance);
             transform.GetComponent<Animator>().Play("Z_Idle");
             Time.timeScale = 0; //freeze game
+            GameManager.Instance.FinishGame();
+
+
         }
         PlayerPrefs.Save();
     }

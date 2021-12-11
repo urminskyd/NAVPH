@@ -30,6 +30,7 @@ public class CanvasController : MonoBehaviour
     void Pause()
     {
         isPaused = true;
+        //Debug.Log(GameManager.Instance.inGameUI.aliveText);
         pauseMenuUI.SetActive(isPaused);
         Time.timeScale = 0; //freeze game
     }

@@ -13,6 +13,12 @@ public class InGameUI : MonoBehaviour
     private int dead = 0;
     private int rescued = 0;
 
+    private void Awake()
+    {
+        GameManager.Instance.inGameUI = this;
+        //Debug.Log("TEST");
+    }
+
     void Update()
     {
         timeRemaining = timeRemaining > 0 ? timeRemaining - Time.deltaTime : 60;

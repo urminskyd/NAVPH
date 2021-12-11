@@ -1,8 +1,12 @@
 ﻿<Properties StartupConfiguration="{24FDCB56-9E2A-C72A-BA20-2EEB18A6599E}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/NPC/KidnapperController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/NPC/HostageController.cs" Line="52" Column="34" />
-      <File FileName="Assets/Scripts/NPC/KidnapperController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/NPC/KidnapperController.cs" Line="38" Column="47" />
+      <File FileName="Assets/GameManager.cs" Line="72" Column="29" />
+      <File FileName="Assets/Scripts/UI/InGameUI.cs" Line="18" Column="46" />
+      <File FileName="Assets/Scripts/UI/CanvasController.cs" Line="33" Column="27" />
+      <File FileName="Assets/Scripts/Player/PlayerController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UI/MainMenu.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -10,9 +14,10 @@
           <Node name="NAVPH" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="NPC" expanded="True">
-                  <Node name="KidnapperController.cs" selected="True" />
-                </Node>
+                <Node name="NPC" expanded="True" />
+                <Node name="Player" expanded="True" />
+                <Node name="UI" expanded="True" />
+                <Node name="GameManager.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -23,7 +28,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Addressable__Editor PreferredExecutionTarget="6680cea7-365f-4963-afc2-6c4b6b93b9d8" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9857424a-cca7-4036-bd15-03d9b142ea8c" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b2ae5eee-e5e1-4864-be04-812d4f5bfc17" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

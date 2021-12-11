@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         GameManager.Instance.LoadScene("Game");
+        GameManager.Instance.HideMenu();
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

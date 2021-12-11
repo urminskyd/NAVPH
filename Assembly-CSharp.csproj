@@ -66,7 +66,7 @@
     <Compile Include="Assets/AN Interactive Physical Door Pack/Scripts/AN_HeroController.cs" />
     <Compile Include="Assets/AN Interactive Physical Door Pack/Scripts/AN_Button.cs" />
     <Compile Include="Assets/Scripts/UI/InGameUI.cs" />
-    <Compile Include="Assets/GameManager.cs" />
+    <Compile Include="Assets/Scripts/GameManager.cs" />
     <Compile Include="Assets/AN Interactive Physical Door Pack/Scripts/AN_DoorKey.cs" />
     <Compile Include="Assets/Scripts/NPC/KidnapperController.cs" />
     <Compile Include="Assets/Scripts/Player/PlayerController.cs" />
