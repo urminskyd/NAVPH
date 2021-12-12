@@ -37,7 +37,6 @@ public class KidnapperController : MonoBehaviour
             Time.timeScale = 0; //freeze game
             GameManager.Instance.FinishGame();
 
-
         }
         PlayerPrefs.Save();
     }

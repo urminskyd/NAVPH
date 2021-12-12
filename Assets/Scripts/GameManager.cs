@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public GameObject levelMenu;
     public GameObject controlsMenu;
     public GameObject statsPanel;
+    public GameObject gamePanel;
 
     //public static bool isPaused = false;
     //public GameObject pauseMenuUI;
@@ -38,10 +39,11 @@ public class GameManager : MonoBehaviour
         {
             if (instance is null)
             {
-                DontDestroyOnLoad(instance);
                 instance = new GameManager();
+                DontDestroyOnLoad(instance);
                 Debug.Log("CREATING GAME MANAGER");
             }
+
             return instance;
         }
     }
@@ -63,6 +65,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void PlayGame()
+    {
+        LoadScene("Game");
+        HideMenu();
+        gamePanel.SetActive(true);
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("QUIT");
+        Application.Quit();
+    }
+
     public void FinishGame()
     {
         //LoadScene("Menu");
@@ -70,8 +85,12 @@ public class GameManager : MonoBehaviour
         //print(menuPanel);
         //menuPanel.SetActive(false);
         //}
+
+        print(instance);
         menuPanel.SetActive(true);
         statsPanel.SetActive(true);
+        gamePanel.SetActive(false);
+
         Debug.Log("FINISH");
     }
 
