@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
-using UnityEngine.UI;
-
 
 public enum GameState { MAIN_MENU }
 
@@ -19,17 +15,10 @@ public class GameManager : MonoBehaviour
     public GameObject statsPanel;
     public GameObject gamePanel;
 
-    //public static bool isPaused = false;
-    //public GameObject pauseMenuUI;
-    //public Text timeText;
-    //public Text aliveText;
-    //public Text deadText;
-    //public Text rescuedText;
-
-    //public float timeRemaining;
-    //private int alive = 5;
-    //private int dead = 0;
-    //private int rescued = 0;
+    public float timeUntillHostageDeath;
+    public int alive { get; set; }
+    public int dead { get; set; }
+    public int rescued { get; set; }
 
     protected GameManager() {}
 
@@ -46,6 +35,19 @@ public class GameManager : MonoBehaviour
 
             return instance;
         }
+    }
+
+    private void Awake()
+    {
+        instance = this;
+        mainMenu.SetActive(true);
+
+        alive = 5;
+        dead = 0;
+        rescued = 0;
+        timeUntillHostageDeath = 60;
+
+        //SceneManager.LoadScene("Game", LoadSceneMode.Additive);
     }
 
     public void LoadScene(string scene)
@@ -80,68 +82,28 @@ public class GameManager : MonoBehaviour
 
     public void FinishGame()
     {
-        //LoadScene("Menu");
-        //if (menuPanel) {
-        //print(menuPanel);
-        //menuPanel.SetActive(false);
-        //}
-
-        print(instance);
-        menuPanel.SetActive(true);
+        statsPanel.GetComponentInChildren<EndGameStats>().setStatsValues(rescued, dead, 0, rescued > (alive + dead));
         statsPanel.SetActive(true);
+        menuPanel.SetActive(true);
         gamePanel.SetActive(false);
 
+        SceneManager.UnloadSceneAsync("Game");
         Debug.Log("FINISH");
     }
 
-    private void Awake()
+    public void KillHostage()
     {
-        instance = this;
-        mainMenu.SetActive(true);
-        Debug.Log("GameManager - Main menu");
-        //statsPanel.SetActive(true);
-        //Debug.Log(statsPanel);
+        //TODO deaktivovat jedneho rukojemnika zo sceny
+        dead += 1;
+        alive -= 1;
 
-        //SceneManager.LoadScene("Game", LoadSceneMode.Additive);
+        if (alive == 0)
+            FinishGame();
     }
 
-    //private void Resume()
-    //{
-    //    isPaused = false;
-    //    pauseMenuUI.SetActive(isPaused);
-    //    Time.timeScale = 1f; //unfreeze game
-    //}
-
-    //private void Pause()
-    //{
-    //    isPaused = true;
-    //    pauseMenuUI.SetActive(isPaused);
-    //    Time.timeScale = 0; //freeze game
-    //}
-
-    // Start is called before the first frame update
-    void Start()
+    public void RescueHostage()
     {
-        //instance = this;
-        //Debug.Log("Loading");
+        rescued += 1;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        //timeRemaining = timeRemaining > 0 ? timeRemaining - Time.deltaTime : 60;
-        //timeText.text = "time till another hostage dies \n" + (int)timeRemaining;
-
-        //aliveText.text = "Alive: " + alive;
-        //deadText.text = "Dead: " + dead;
-        //rescuedText.text = "Rescued: " + rescued;
-        //if (Input.GetKeyDown(KeyCode.Escape))
-        //{
-        //    Debug.Log("TEST");
-        //    if (isPaused)
-        //        Resume();
-        //    else
-        //        Pause();
-        //}
-    }
 }

@@ -8,6 +8,8 @@ TagManager:
   - Hostage
   - SpawnPoint
   - MenuItem
+  - HostageEscapeSpace
+  - Level
   layers:
   - Default
   - TransparentFX

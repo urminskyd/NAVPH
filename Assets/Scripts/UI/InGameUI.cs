@@ -8,24 +8,29 @@ public class InGameUI : MonoBehaviour
     public Text deadText;
     public Text rescuedText;
 
-    public float timeRemaining;
-    private int alive = 5;
-    private int dead = 0;
-    private int rescued = 0;
+    private GameManager gameManager;
+    private float hostageDeathTime;
 
     private void Awake()
     {
-        GameManager.Instance.inGameUI = this;
-        //Debug.Log("TEST");
+        gameManager = GameManager.Instance;
+        gameManager.inGameUI = this;
+        hostageDeathTime = gameManager.timeUntillHostageDeath;
     }
 
     void Update()
     {
-        timeRemaining = timeRemaining > 0 ? timeRemaining - Time.deltaTime : 60;
-        timeText.text = "time till another hostage dies \n" + (int)timeRemaining;
+        if (hostageDeathTime > 0)
+            hostageDeathTime -= Time.deltaTime;
+        else
+        {
+            hostageDeathTime = gameManager.timeUntillHostageDeath;
+            gameManager.KillHostage();
+        }
 
-        aliveText.text = "Alive: " + alive;
-        deadText.text = "Dead: " + dead;
-        rescuedText.text = "Rescued: " + rescued;
+        timeText.text = "time till another hostage dies \n" + (int)hostageDeathTime;
+        aliveText.text = "Alive: " + gameManager.alive;
+        deadText.text = "Dead: " + gameManager.dead;
+        rescuedText.text = "Rescued: " + gameManager.rescued;
     }
 }

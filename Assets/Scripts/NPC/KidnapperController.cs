@@ -1,12 +1,17 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class KidnapperController : MonoBehaviour
 {
     public GameObject player;
     private Rigidbody rb;
+    private AudioSource source;
 
     public float allowedSpeed;
     public float gameOverDistance;
+
+    public float waitTimeCountdown = -1f;
+    public List<AudioClip> audioClips;
 
     private RaycastHit shot;
     private Vector3 playerPosition;
@@ -15,10 +20,24 @@ public class KidnapperController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        source = GetComponent<AudioSource>();
+        source.Play();
     }
 
     void Update()
     {
+        if (!source.isPlaying)
+        {
+            if (waitTimeCountdown < 0f)
+            {
+                source.clip = audioClips[Random.Range(0, audioClips.Count)];
+                source.Play();
+                waitTimeCountdown = Random.Range(1f, 5f);
+            }
+            else
+                waitTimeCountdown -= Time.deltaTime;
+        }
+
         transform.GetComponent<Animator>().Play("Z_Run_InPlace");
 
         qTo = Quaternion.LookRotation(player.transform.position - transform.position);
@@ -29,10 +48,8 @@ public class KidnapperController : MonoBehaviour
 
         Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out shot);
 
-        Debug.Log(shot.distance);
         if (shot.distance > 0 && shot.distance <= gameOverDistance)
         {
-            Debug.Log("GAME OVER." + gameOverDistance);
             transform.GetComponent<Animator>().Play("Z_Idle");
             Time.timeScale = 0; //freeze game
             GameManager.Instance.FinishGame();
