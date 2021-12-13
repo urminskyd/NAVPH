@@ -39,6 +39,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5276190088157594230}
     m_Modifications:
+    - target: {fileID: 3857801406477410690, guid: 69a5d291dd7b2423480223467f21bddb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c258294d7b46b4a6db83f28394988ee4, type: 2}
     - target: {fileID: 5244794543959558893, guid: 69a5d291dd7b2423480223467f21bddb, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -101,6 +105,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5276190088157594230}
     m_Modifications:
+    - target: {fileID: 783555446006870937, guid: 30efac2d5eebf4ce48077b9b3a0adb3a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0add11228892b4bffbfe1e162c2f204a, type: 2}
+    - target: {fileID: 1094193177432267964, guid: 30efac2d5eebf4ce48077b9b3a0adb3a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0add11228892b4bffbfe1e162c2f204a, type: 2}
+    - target: {fileID: 1133650094143807148, guid: 30efac2d5eebf4ce48077b9b3a0adb3a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0add11228892b4bffbfe1e162c2f204a, type: 2}
+    - target: {fileID: 1665402164641649815, guid: 30efac2d5eebf4ce48077b9b3a0adb3a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0add11228892b4bffbfe1e162c2f204a, type: 2}
+    - target: {fileID: 3024200814329466326, guid: 30efac2d5eebf4ce48077b9b3a0adb3a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0add11228892b4bffbfe1e162c2f204a, type: 2}
     - target: {fileID: 3480161912554390730, guid: 30efac2d5eebf4ce48077b9b3a0adb3a, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -145,6 +169,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4287990536987161312, guid: 30efac2d5eebf4ce48077b9b3a0adb3a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0add11228892b4bffbfe1e162c2f204a, type: 2}
     - target: {fileID: 4902629747947195500, guid: 30efac2d5eebf4ce48077b9b3a0adb3a, type: 3}
       propertyPath: m_Name
       value: Wall_6x6

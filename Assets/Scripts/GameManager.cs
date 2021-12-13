@@ -93,17 +93,21 @@ public class GameManager : MonoBehaviour
 
     public void KillHostage()
     {
-        //TODO deaktivovat jedneho rukojemnika zo sceny
+        //TODO znicit objekt jedneho rukojemnika zo sceny
         dead += 1;
         alive -= 1;
 
-        if (alive == 0)
+        if (alive == 0 || dead > (alive + rescued)) // is killed more than half hostages
             FinishGame();
     }
 
     public void RescueHostage()
     {
         rescued += 1;
+        alive -= 1;
+
+        if (alive == 0)
+            FinishGame();
     }
 
 }

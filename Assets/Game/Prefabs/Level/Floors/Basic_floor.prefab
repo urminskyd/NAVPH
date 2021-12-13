@@ -38,6 +38,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2247951293488889313}
     m_Modifications:
+    - target: {fileID: 68236031816488798, guid: fec8c5a31abb7431eb12302f8e4f2479, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8966a09ec81094fca94186a87a695532, type: 2}
     - target: {fileID: 5649881918577492342, guid: fec8c5a31abb7431eb12302f8e4f2479, type: 3}
       propertyPath: m_Name
       value: floor
