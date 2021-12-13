@@ -27069,7 +27069,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1856339027046336059}
-  m_LocalRotation: {x: 0.56242794, y: 0.24745348, z: 0.33349803, w: 0.71499705}
+  m_LocalRotation: {x: 0.5624279, y: 0.24745345, z: 0.333498, w: 0.714997}
   m_LocalPosition: {x: -0.039707724, y: -0.039045572, z: -0.021918718}
   m_LocalScale: {x: 1, y: 1.0000001, z: 0.9999998}
   m_Children:
@@ -32654,7 +32654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2560294718274855917, guid: 2844351181dce489db93085f73a9d04f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2560294718943498259, guid: 2844351181dce489db93085f73a9d04f, type: 3}
       propertyPath: kidnapper
