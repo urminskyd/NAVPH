@@ -18,8 +18,6 @@ public class HostageController : MonoBehaviour
         {
             triggered = true;
             hostageInteractPanel.SetActive(true);
-            Debug.Log("followAll " + isFollowAllowed);
-            Debug.Log("triggered " + triggered);
         }
     }
 

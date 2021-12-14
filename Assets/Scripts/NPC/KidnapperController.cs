@@ -1,31 +1,61 @@
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.AI;
 
 public class KidnapperController : MonoBehaviour
 {
-    public GameObject player;
-    private Rigidbody rb;
-    private AudioSource source;
-
-    public float allowedSpeed;
-    public float gameOverDistance;
-
+    private NavMeshAgent agent;
+    public Transform targetPlayer;
     public float waitTimeCountdown = -1f;
     public List<AudioClip> audioClips;
-
-    private RaycastHit shot;
-    private Vector3 playerPosition;
-    private Quaternion qTo;
+    private AudioSource source;
+    private bool targetIsPlayer = false;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        agent = GetComponentInParent<NavMeshAgent>();
         source = GetComponent<AudioSource>();
-        source.Play();
     }
 
     void Update()
     {
+        if (!GameManager.Instance.playerIsHide)
+        {
+            agent.destination = targetPlayer.position;
+            transform.LookAt(targetPlayer);
+            targetIsPlayer = true;
+        }
+        else
+        {
+            targetIsPlayer = false;
+            GameObject nearestSpawnPoint = null;
+            float min = 0;
+
+            GameObject[] spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
+            foreach (GameObject point in spawnPoints)
+            {
+                float dist = Vector3.Distance(point.transform.position, transform.position);
+                if (dist < min || min == 0)
+                    nearestSpawnPoint = point;
+            }
+            agent.destination = nearestSpawnPoint.transform.position;
+            transform.LookAt(nearestSpawnPoint.transform);
+        }
+
+        if (agent.remainingDistance < 1)
+        {
+            if (targetIsPlayer)
+            {
+                Time.timeScale = 0; //freeze game
+                GameManager.Instance.FinishGame();
+            }
+            agent.gameObject.SetActive(false);
+        }
+        else
+        {
+            transform.GetComponent<Animator>().Play("Z_Run_InPlace");
+        }
+
         if (!source.isPlaying)
         {
             if (waitTimeCountdown < 0f)
@@ -37,34 +67,5 @@ public class KidnapperController : MonoBehaviour
             else
                 waitTimeCountdown -= Time.deltaTime;
         }
-
-        if (!GameManager.Instance.playerIsHide)
-        {
-            transform.GetComponent<Animator>().Play("Z_Run_InPlace");
-
-            qTo = Quaternion.LookRotation(player.transform.position - transform.position);
-            qTo = Quaternion.Slerp(transform.rotation, qTo, 10 * Time.deltaTime);
-
-            playerPosition = player.transform.position - transform.position;
-            playerPosition = playerPosition.normalized * allowedSpeed; //normalize vector, so hostage speed is not based on distance
-
-            Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out shot);
-
-            if (shot.distance > 0 && shot.distance <= gameOverDistance)
-            {
-                transform.GetComponent<Animator>().Play("Z_Idle");
-                Time.timeScale = 0; //freeze game
-                GameManager.Instance.FinishGame();
-
-            }
-        }
-       
-        PlayerPrefs.Save();
-    }
-
-    private void FixedUpdate()
-    {
-        rb.MoveRotation(qTo.normalized); //look at the player
-        rb.MovePosition(transform.position + (playerPosition * allowedSpeed * Time.deltaTime));
     }
 }

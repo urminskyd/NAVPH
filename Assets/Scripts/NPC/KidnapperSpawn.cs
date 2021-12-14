@@ -8,21 +8,19 @@ public class KidnapperSpawn : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("prichadzam!");
         if (other.tag == "Player")
             triggered = true;
     }
 
     private void OnTriggerExit()
     {
-        Debug.Log("odchadzam!");
         triggered = false;
         kidnapper.SetActive(false); //if player gets out of trigger space, the kidnapper will dissapear
     }
 
     void Update()
     {
-        if (triggered && !kidnapper.activeSelf)
+        if (triggered && !kidnapper.activeSelf && !GameManager.Instance.playerIsHide)
         {
             GameObject spawnPoint = new List<GameObject>(GameObject.FindGameObjectsWithTag("SpawnPoint"))
                 .Find(g => g.transform.IsChildOf(transform));
