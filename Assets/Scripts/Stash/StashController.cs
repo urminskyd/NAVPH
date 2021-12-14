@@ -10,7 +10,6 @@ public class StashController : MonoBehaviour
         if (other.tag == "Player")
         {
             GameManager.Instance.playerIsHide = true;
-            Debug.LogError("Collider skryvam sa");
             //triggered = true;
             //hostageInteractPanel.SetActive(true);
         }
@@ -21,21 +20,8 @@ public class StashController : MonoBehaviour
         if (other.tag == "Player")
         {
             GameManager.Instance.playerIsHide = false;
-            Debug.LogError("Collider uz sa neskryvam");
             //triggered = true;
             //hostageInteractPanel.SetActive(true);
         }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

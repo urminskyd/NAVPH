@@ -6,14 +6,16 @@ public class KidnapperSpawn : MonoBehaviour
     public GameObject kidnapper;
     private bool triggered = false;
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("prichadzam!");
         if (other.tag == "Player")
             triggered = true;
     }
 
     private void OnTriggerExit()
     {
+        Debug.Log("odchadzam!");
         triggered = false;
         kidnapper.SetActive(false); //if player gets out of trigger space, the kidnapper will dissapear
     }

@@ -55,12 +55,9 @@
   <ItemGroup>
     <Compile Include="Assets/Scripts/UI/GameCanvasController.cs" />
     <Compile Include="Assets/Scripts/NPC/KidnapperSpawn.cs" />
-    <Compile Include="Assets/DoorController.cs" />
-    <Compile Include="Assets/HostageSpawn.cs" />
     <Compile Include="Assets/AN Interactive Physical Door Pack/Scripts/AN_PlugScript.cs" />
     <Compile Include="Assets/AN Interactive Physical Door Pack/Scripts/AN_HeroInteractive.cs" />
     <Compile Include="Assets/Scripts/CameraController.cs" />
-    <Compile Include="Assets/GameAudio.cs" />
     <Compile Include="Assets/Scripts/Stash/StashController.cs" />
     <Compile Include="Assets/Scripts/UI/EndGameStats.cs" />
     <Compile Include="Assets/AN Interactive Physical Door Pack/Scripts/AN_HeroController.cs" />
@@ -69,10 +66,13 @@
     <Compile Include="Assets/Scripts/GameManager.cs" />
     <Compile Include="Assets/AN Interactive Physical Door Pack/Scripts/AN_DoorKey.cs" />
     <Compile Include="Assets/Scripts/NPC/KidnapperController.cs" />
-    <Compile Include="Assets/HostageEscapePoint.cs" />
     <Compile Include="Assets/Scripts/Player/PlayerController.cs" />
     <Compile Include="Assets/AN Interactive Physical Door Pack/Scripts/AN_DoorScript.cs" />
     <Compile Include="Assets/Scripts/NPC/HostageController.cs" />
+    <Compile Include="Assets/Scripts/NPC/HostageSpawn.cs" />
+    <Compile Include="Assets/Scripts/HostageEscapePoint.cs" />
+    <Compile Include="Assets/Scripts/GameAudio.cs" />
+    <Compile Include="Assets/Scripts/DoorController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
