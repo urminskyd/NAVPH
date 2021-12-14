@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public int alive { get; set; }
     public int dead { get; set; }
     public int rescued { get; set; }
+    public bool playerIsHide { get; set; } = false;
 
     protected GameManager() {}
 

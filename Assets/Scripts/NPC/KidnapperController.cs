@@ -38,23 +38,27 @@ public class KidnapperController : MonoBehaviour
                 waitTimeCountdown -= Time.deltaTime;
         }
 
-        transform.GetComponent<Animator>().Play("Z_Run_InPlace");
-
-        qTo = Quaternion.LookRotation(player.transform.position - transform.position);
-        qTo = Quaternion.Slerp(transform.rotation, qTo, 10 * Time.deltaTime);
-
-        playerPosition = player.transform.position - transform.position;
-        playerPosition = playerPosition.normalized * allowedSpeed; //normalize vector, so hostage speed is not based on distance
-
-        Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out shot);
-
-        if (shot.distance > 0 && shot.distance <= gameOverDistance)
+        if (!GameManager.Instance.playerIsHide)
         {
-            transform.GetComponent<Animator>().Play("Z_Idle");
-            Time.timeScale = 0; //freeze game
-            GameManager.Instance.FinishGame();
+            transform.GetComponent<Animator>().Play("Z_Run_InPlace");
 
+            qTo = Quaternion.LookRotation(player.transform.position - transform.position);
+            qTo = Quaternion.Slerp(transform.rotation, qTo, 10 * Time.deltaTime);
+
+            playerPosition = player.transform.position - transform.position;
+            playerPosition = playerPosition.normalized * allowedSpeed; //normalize vector, so hostage speed is not based on distance
+
+            Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out shot);
+
+            if (shot.distance > 0 && shot.distance <= gameOverDistance)
+            {
+                transform.GetComponent<Animator>().Play("Z_Idle");
+                Time.timeScale = 0; //freeze game
+                GameManager.Instance.FinishGame();
+
+            }
         }
+       
         PlayerPrefs.Save();
     }
 

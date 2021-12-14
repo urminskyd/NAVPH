@@ -10,6 +10,7 @@ TagManager:
   - MenuItem
   - HostageEscapeSpace
   - Level
+  - Stash
   layers:
   - Default
   - TransparentFX
