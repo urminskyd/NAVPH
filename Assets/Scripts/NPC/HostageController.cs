@@ -34,10 +34,6 @@ public class HostageController : MonoBehaviour
 
     void Update()
     {
-        var qTo = Quaternion.LookRotation(targetPlayer.position - targetPlayer.position);
-        qTo = Quaternion.Slerp(targetPlayer.rotation, qTo, 10 * Time.deltaTime);
-        targetPlayer.GetComponent<Rigidbody>().MoveRotation(qTo); //code to look at the player
-
         agent.destination = targetPlayer.position;
 
         if (Input.GetKeyDown(KeyCode.F))

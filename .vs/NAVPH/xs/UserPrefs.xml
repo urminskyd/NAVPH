@@ -1,19 +1,24 @@
-﻿<Properties StartupConfiguration="{24FDCB56-9E2A-C72A-BA20-2EEB18A6599E}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/NPC/KidnapperController.cs">
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI/EndGameStats.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameManager.cs" Line="24" Column="1" />
-      <File FileName="Assets/Scripts/Stash/StashController.cs" Line="27" Column="1" />
-      <File FileName="Assets/Scripts/NPC/KidnapperSpawn.cs" Line="25" Column="103" />
-      <File FileName="Assets/Scripts/NPC/KidnapperController.cs" Line="51" Column="14" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="79" Column="1" />
+      <File FileName="Assets/Scripts/NPC/KidnapperController.cs" Line="25" Column="44" />
+      <File FileName="Assets/Scripts/UI/InGameUI.cs" Line="28" Column="39" />
+      <File FileName="Assets/Scripts/NPC/HostageController.cs" Line="37" Column="1" />
+      <File FileName="Assets/Scripts/NPC/HostageSpawn.cs" Line="21" Column="10" />
+      <File FileName="Assets/Scripts/UI/EndGameStats.cs" Line="25" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="NAVPH" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True">
-                <Node name="NPC" expanded="True">
-                  <Node name="KidnapperController.cs" selected="True" />
+            <Node name="Assembly-CSharp" expanded="True">
+              <Node name="Assets" expanded="True">
+                <Node name="Scripts" expanded="True">
+                  <Node name="NPC" expanded="True" />
+                  <Node name="UI" expanded="True">
+                    <Node name="EndGameStats.cs" selected="True" />
+                  </Node>
                 </Node>
               </Node>
             </Node>

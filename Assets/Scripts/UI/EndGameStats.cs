@@ -23,7 +23,6 @@ public class EndGameStats : MonoBehaviour
 
     public void setStatsValues(int rescued, int died, float totalTime, bool gameWin)
     {
-        Debug.Log(totalTime);
         title = gameWin ? "GAME WIN" : "GAME OVER";
         this.rescued = rescued;
         this.died = died;

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HostageSpawn : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class HostageSpawn : MonoBehaviour
             HostageController hostageController = go.GetComponentInChildren<HostageController>();
             hostageController.hostageInteractPanel = hostageInteractPanel;
             hostageController.targetPlayer = GameObject.FindGameObjectWithTag("Player").transform;
+            SceneManager.MoveGameObjectToScene(go, SceneManager.GetSceneByBuildIndex(1));
         }
     }
 }
