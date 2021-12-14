@@ -1,20 +1,16 @@
 using UnityEngine;
+using UnityEngine.AI;
 
+//[RequireComponent(typeof(NavMeshAgent ))]
 public class HostageController : MonoBehaviour
 {
-    public GameObject player;
-    public GameObject hostage;
+    public Transform targetPlayer;
     public GameObject hostageInteractPanel;
+    
+    private NavMeshAgent agent;
 
-    public float allowedDistance;
-    public float allowedSpeed;
     private bool triggered = false;
     private bool isFollowAllowed = false;
-
-    private RaycastHit shot;
-    private Vector3 playerPosition;
-    private Vector3 playerPositionRelativeToHostage;
-    private Rigidbody rb;
 
     private void OnTriggerStay(Collider other)
     {
@@ -22,6 +18,8 @@ public class HostageController : MonoBehaviour
         {
             triggered = true;
             hostageInteractPanel.SetActive(true);
+            Debug.Log("followAll " + isFollowAllowed);
+            Debug.Log("triggered " + triggered);
         }
     }
 
@@ -31,41 +29,31 @@ public class HostageController : MonoBehaviour
             hostageInteractPanel.SetActive(false);
     }
 
-    private void Start()
+    void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        agent = GetComponentInParent<NavMeshAgent>();
     }
 
     void Update()
     {
-        var qTo = Quaternion.LookRotation(player.transform.position - hostage.transform.position);
-        qTo = Quaternion.Slerp(hostage.transform.rotation, qTo, 10 * Time.deltaTime);
-        hostage.GetComponent<Rigidbody>().MoveRotation(qTo); //code to look at the player
+        var qTo = Quaternion.LookRotation(targetPlayer.position - targetPlayer.position);
+        qTo = Quaternion.Slerp(targetPlayer.rotation, qTo, 10 * Time.deltaTime);
+        targetPlayer.GetComponent<Rigidbody>().MoveRotation(qTo); //code to look at the player
 
-        playerPositionRelativeToHostage = player.transform.position - hostage.transform.position;
-        playerPosition = player.transform.position - transform.position;
-        Physics.Raycast(hostage.transform.position, hostage.transform.TransformDirection(Vector3.forward), out shot);
+        agent.destination = targetPlayer.position;
 
         if (Input.GetKeyDown(KeyCode.F))
             isFollowAllowed = !isFollowAllowed;
 
-        if (shot.distance >= allowedDistance && triggered && isFollowAllowed)
+        if (triggered && isFollowAllowed)
         {
-            allowedSpeed = 0.75f;
+            agent.speed = 1.5f;
             //hostage.GetComponent<Animator>().Play("Z_Walk1_InPlace");
         }
         else
         {
-            allowedSpeed = 0;
+            agent.speed = 0;
             //hostage.GetComponent<Animator>().Play("Z_Idle");
         }
-    }
-
-    private void FixedUpdate()
-    {
-        Rigidbody hostageRigidbody = hostage.transform.GetComponent<Rigidbody>();
-        hostageRigidbody.MovePosition(hostage.transform.position + (playerPositionRelativeToHostage * allowedSpeed * Time.deltaTime));
-
-        rb.MovePosition(transform.position + (playerPosition * allowedSpeed * Time.deltaTime));
     }
 }

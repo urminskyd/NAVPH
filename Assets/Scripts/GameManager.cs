@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public GameObject gamePanel;
 
     public float timeUntillHostageDeath;
-    public int alive { get; set; }
+    public int alive;
     public int dead { get; set; }
     public int rescued { get; set; }
     public bool playerIsHide { get; set; } = false;
@@ -42,13 +42,6 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
         mainMenu.SetActive(true);
-
-        alive = 5;
-        dead = 0;
-        rescued = 0;
-        timeUntillHostageDeath = 60;
-
-        //SceneManager.LoadScene("Game", LoadSceneMode.Additive);
     }
 
     public void LoadScene(string scene)
@@ -94,12 +87,16 @@ public class GameManager : MonoBehaviour
 
     public void KillHostage()
     {
-        //TODO znicit objekt jedneho rukojemnika zo sceny
         dead += 1;
         alive -= 1;
 
         if (alive == 0 || dead > (alive + rescued)) // is killed more than half hostages
             FinishGame();
+        else
+        {
+            GameObject hostage = GameObject.FindGameObjectWithTag("Hostage");
+            Destroy(hostage.GetComponentInParent<HostageController>().gameObject);
+        }
     }
 
     public void RescueHostage()
