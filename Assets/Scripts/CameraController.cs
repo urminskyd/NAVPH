@@ -2,17 +2,17 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public Transform target;
-    public Vector3 offset;
+    private Camera cam;
+    public float sensitivity;
 
-    private void Update()
+    void Start()
     {
-        Vector3 temp = target.transform.position;
-        temp.x = temp.x - offset.x;
-        temp.y = offset.y;
-        temp.z = temp.z - offset.z;
+        cam = Camera.main;
+    }
 
-        transform.position = temp;
-
+    void Update()
+    {
+        float scroll = Input.GetAxis("Mouse ScrollWheel") * sensitivity;
+        cam.fieldOfView = Mathf.Clamp(cam.fieldOfView + scroll, 30, 100);
     }
 }
