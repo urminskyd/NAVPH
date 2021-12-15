@@ -1,29 +1,28 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/NPC/KidnapperController.cs">
+﻿<Properties StartupConfiguration="{24FDCB56-9E2A-C72A-BA20-2EEB18A6599E}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/NPC/HostageSpawn.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameManager.cs" Line="79" Column="1" />
-      <File FileName="Assets/Scripts/NPC/KidnapperController.cs" Line="16" Column="50" />
-      <File FileName="Assets/Scripts/UI/InGameUI.cs" />
-      <File FileName="Assets/Scripts/NPC/HostageController.cs" />
-      <File FileName="Assets/Scripts/NPC/HostageSpawn.cs" />
-      <File FileName="Assets/Scripts/UI/EndGameStats.cs" Line="25" Column="6" />
-      <File FileName="Assets/Scripts/Stash/StashController.cs" Line="13" Column="13" />
-      <File FileName="Assets/Scripts/Player/PlayerController.cs" Line="19" Column="31" />
-      <File FileName="Assets/Scripts/NPC/KidnapperSpawn.cs" Line="7" Column="36" />
+      <File FileName="Assets/Scripts/CameraController.cs" Line="9" Column="33" />
+      <File FileName="Assets/Scripts/NPC/HostageSpawn.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="NAVPH" expanded="True">
-            <Node name="Assembly-CSharp" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="NPC" expanded="True">
+                  <Node name="HostageSpawn.cs" selected="True" />
+                </Node>
+                <Node name="Player" expanded="True" />
+                <Node name="UI" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="UMA_Core" expanded="True">
               <Node name="Assets" expanded="True">
-                <Node name="Scripts" expanded="True">
-                  <Node name="NPC" expanded="True">
-                    <Node name="KidnapperController.cs" selected="True" />
+                <Node name="UMA" expanded="True">
+                  <Node name="Core" expanded="True">
+                    <Node name="Scripts" expanded="True" />
                   </Node>
-                  <Node name="Player" expanded="True" />
-                  <Node name="Stash" expanded="True" />
-                  <Node name="UI" expanded="True" />
                 </Node>
               </Node>
             </Node>
@@ -35,7 +34,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Addressable__Editor PreferredExecutionTarget="6680cea7-365f-4963-afc2-6c4b6b93b9d8" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="f3c09db5-b5ce-4265-bf3c-25dd8f831efb" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b1c1fcdb-0800-4781-b84b-d25d5992b813" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

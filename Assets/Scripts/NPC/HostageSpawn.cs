@@ -14,10 +14,14 @@ public class HostageSpawn : MonoBehaviour
         for (int x = 0; x < alive; x++)
         {
             GameObject go = Instantiate(hostagePrefab, gameObjects[x].transform.position, Quaternion.identity);
+            Rigidbody rigidbody = go.AddComponent<Rigidbody>();
+            rigidbody.mass = 10;
             go.tag = "Hostage";
+
             HostageController hostageController = go.GetComponentInChildren<HostageController>();
             hostageController.hostageInteractPanel = hostageInteractPanel;
             hostageController.targetPlayer = GameObject.FindGameObjectWithTag("Player").transform;
+
             SceneManager.MoveGameObjectToScene(go, SceneManager.GetSceneByBuildIndex(1));
         }
     }
