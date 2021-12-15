@@ -2,9 +2,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+[RequireComponent(typeof(NavMeshAgent))]
 public class KidnapperController : MonoBehaviour
 {
-    public NavMeshAgent agent;
+    NavMeshAgent agent;
     public Transform targetPlayer;
     public float waitTimeCountdown = -1f;
     public List<AudioClip> audioClips;
@@ -13,7 +14,8 @@ public class KidnapperController : MonoBehaviour
 
     void Start()
     {
-        agent = GetComponentInParent<NavMeshAgent>();
+
+        agent = GetComponent<NavMeshAgent>();
         source = GetComponent<AudioSource>();
     }
 
@@ -21,12 +23,12 @@ public class KidnapperController : MonoBehaviour
     {
         if (!GameManager.Instance.playerIsHide)
         {
-            agent.SetDestination(targetPlayer.position);
+            agent.destination = targetPlayer.position;
+            //agent.SetDestination(targetPlayer.transform.position);
 
-            Debug.Log(agent.nextPosition);
-            Debug.Log(targetPlayer.position);
-            //agent.destination = targetPlayer.position;
-            transform.LookAt(targetPlayer);
+            //Debug.Log(agent.nextPosition);
+            //Debug.Log(targetPlayer.transform.position);
+            //transform.LookAt(targetPlayer);
             targetIsPlayer = true;
         }
         else
@@ -41,7 +43,6 @@ public class KidnapperController : MonoBehaviour
 
             targetIsPlayer = false;
             GameObject nearestSpawnPoint = null;
-            
 
             GameObject[] spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
             foreach (GameObject point in spawnPoints)
@@ -51,22 +52,22 @@ public class KidnapperController : MonoBehaviour
                     nearestSpawnPoint = point;
             }
             agent.destination = nearestSpawnPoint.transform.position;
-            transform.LookAt(nearestSpawnPoint.transform);
+            //transform.LookAt(nearestSpawnPoint.transform);
         }
 
         if (agent.remainingDistance < 1)
         {
-            Debug.Log("CHYTENY");
-            if (targetIsPlayer)
-            {
-                Time.timeScale = 0; //freeze game
-                GameManager.Instance.FinishGame();
-            }
-            agent.gameObject.SetActive(false);
+            //Debug.LogError("CHYTENY");
+            //if (targetIsPlayer)
+            //{
+            //    Time.timeScale = 0; //freeze game
+            //    GameManager.Instance.FinishGame();
+            //}
+            //agent.gameObject.SetActive(false);
         }
         else
         {
-            transform.GetComponent<Animator>().Play("Z_Run_InPlace");
+             transform.GetComponent<Animator>().Play("Z_Run_InPlace");
         }
 
         if (!source.isPlaying)

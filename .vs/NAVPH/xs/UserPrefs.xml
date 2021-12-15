@@ -1,9 +1,8 @@
 ﻿<Properties StartupConfiguration="{24FDCB56-9E2A-C72A-BA20-2EEB18A6599E}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/NPC/KidnapperController.cs">
     <Files>
-      <File FileName="Assets/Scripts/CameraController.cs" Line="9" Column="33" />
-      <File FileName="Assets/Scripts/NPC/HostageSpawn.cs" Line="18" Column="33" />
-      <File FileName="Assets/Scripts/NPC/KidnapperController.cs" Line="83" Column="1" />
+      <File FileName="Assets/TargetFollow.cs" Line="9" Column="1" />
+      <File FileName="Assets/Scripts/NPC/KidnapperController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,17 +12,6 @@
               <Node name="Scripts" expanded="True">
                 <Node name="NPC" expanded="True">
                   <Node name="KidnapperController.cs" selected="True" />
-                </Node>
-                <Node name="Player" expanded="True" />
-                <Node name="UI" expanded="True" />
-              </Node>
-            </Node>
-            <Node name="UMA_Core" expanded="True">
-              <Node name="Assets" expanded="True">
-                <Node name="UMA" expanded="True">
-                  <Node name="Core" expanded="True">
-                    <Node name="Scripts" expanded="True" />
-                  </Node>
                 </Node>
               </Node>
             </Node>
@@ -35,7 +23,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Addressable__Editor PreferredExecutionTarget="6680cea7-365f-4963-afc2-6c4b6b93b9d8" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b1c1fcdb-0800-4781-b84b-d25d5992b813" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e019047a-f233-4f69-9ab5-248820f4a49e" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
