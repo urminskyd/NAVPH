@@ -2679,7 +2679,12 @@ MonoBehaviour:
   agent: {fileID: 0}
   targetPlayer: {fileID: 0}
   waitTimeCountdown: -1
-  audioClips: []
+  audioClips:
+  - {fileID: 8300000, guid: e4b15ccc6c1d8aa44be86a9f01a22c0f, type: 3}
+  - {fileID: 8300000, guid: cc0b31f8043b6854dbcba03f9e9f3ae8, type: 3}
+  - {fileID: 8300000, guid: d425a1ba5e3359d4dbae8797acfcd0e5, type: 3}
+  - {fileID: 8300000, guid: 5672cb5df4b75c3479ad96959813e311, type: 3}
+  - {fileID: 8300000, guid: efa052ec7030a9e489a69c2e98517db1, type: 3}
 --- !u!1 &8014412341850883009
 GameObject:
   m_ObjectHideFlags: 0
