@@ -3,56 +3,59 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    private CharacterController controller;
+
+    // direction of character movement
+    private float moveHorizontal;
+    private float moveVertical;
+    private Vector3 moveDirection = Vector3.zero;
+
+    // walk properties
     private float walkSpeed = 2.2F;
     private float runSpeed = 3.5F;
-
+    private bool isRunning = false;
+    
+    // character sounds and animations
     public List<AudioClip> walkSounds;
     public List<AudioClip> runSounds;
     private AudioSource source;
-
-    private bool isRunning = false;
-    private Vector3 moveDirection = Vector3.zero;
-    Animator anim;
+    private Animator anim;
 
     public Light playerLight;
 
+    // intensity of light surrounding character  
     public float originalRange;
     public float hideRange;
-
+        
     void Start()
     {
+        controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         source = GetComponent<AudioSource>();
     }
 
     void Update()
     {
-        CharacterController controller = GetComponent<CharacterController>();
-        isRunning = Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W);
+        moveHorizontal = Input.GetAxis("Horizontal");
+        moveVertical = Input.GetAxis("Vertical");
+        isRunning = Input.GetButton("Run") && Input.GetButton("Forward");
 
-        moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical"));
-        moveDirection = transform.TransformDirection(moveDirection);
+        playerLight.range = GameManager.Instance.playerIsHide ? hideRange : originalRange;
+
+        moveDirection = transform.TransformDirection(new Vector3(0, 0, moveVertical));
         moveDirection *= isRunning ? runSpeed : walkSpeed;
 
-        if (GameManager.Instance.playerIsHide)
-        {
-            playerLight.range = hideRange;
-        } else {
-            playerLight.range = originalRange;
-        }
+        anim.SetFloat("Walk", moveVertical);
+        anim.SetBool("Backwards", Input.GetButton("Backward"));
+        anim.SetBool("Run", isRunning);
 
+        transform.Rotate(0, moveHorizontal, 0);
+        controller.Move(moveDirection * Time.deltaTime);
 
-        if (Input.GetAxis("Vertical") > 0)
+        if (moveVertical > 0)
             PlaySound(walkSounds);
         else if (isRunning)
             PlaySound(runSounds);
-
-        anim.SetFloat("Walk", Input.GetAxis("Vertical"));
-        anim.SetBool("Backwards", Input.GetKey(KeyCode.S));
-        anim.SetBool("Run", isRunning);
-
-        transform.Rotate(0, Input.GetAxis("Horizontal"), 0);
-        controller.Move(moveDirection * Time.deltaTime);
     }
 
     void PlaySound(List<AudioClip> sounds)

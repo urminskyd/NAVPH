@@ -8,7 +8,7 @@ public class GameCanvasController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetButton("Pause"))
 
         {
             if (isPaused)

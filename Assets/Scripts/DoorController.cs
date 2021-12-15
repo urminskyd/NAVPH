@@ -28,7 +28,7 @@ public class DoorController : MonoBehaviour
             {
                 doorInteractPanel.SetActive(true);
                 Animator anim = transform.GetComponentInChildren<Animator>();
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetButton("InteractDoor"))
                     anim.SetTrigger("OpenClose");
             }
         }

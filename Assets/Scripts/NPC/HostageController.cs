@@ -36,7 +36,7 @@ public class HostageController : MonoBehaviour
     {
         agent.destination = targetPlayer.position;
 
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetButton("InteractHostage"))
             isFollowAllowed = !isFollowAllowed;
 
         if (triggered && isFollowAllowed)
