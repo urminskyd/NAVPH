@@ -10,6 +10,7 @@ public class StashController : MonoBehaviour
         if (other.tag == "Player")
         {
             GameManager.Instance.playerIsHide = true;
+            
             //triggered = true;
             //hostageInteractPanel.SetActive(true);
         }

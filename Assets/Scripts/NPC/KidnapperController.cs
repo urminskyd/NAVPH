@@ -4,7 +4,7 @@ using UnityEngine.AI;
 
 public class KidnapperController : MonoBehaviour
 {
-    private NavMeshAgent agent;
+    public NavMeshAgent agent;
     public Transform targetPlayer;
     public float waitTimeCountdown = -1f;
     public List<AudioClip> audioClips;
@@ -21,15 +21,27 @@ public class KidnapperController : MonoBehaviour
     {
         if (!GameManager.Instance.playerIsHide)
         {
-            agent.destination = targetPlayer.position;
+            agent.SetDestination(targetPlayer.position);
+
+            Debug.Log(agent.nextPosition);
+            Debug.Log(targetPlayer.position);
+            //agent.destination = targetPlayer.position;
             transform.LookAt(targetPlayer);
             targetIsPlayer = true;
         }
         else
         {
+            //float dist = Vector3.Distance(agent.destination, transform.position);
+            float min = 0;
+
+            //if (dist < min || min == 0)
+            //{
+
+            //}
+
             targetIsPlayer = false;
             GameObject nearestSpawnPoint = null;
-            float min = 0;
+            
 
             GameObject[] spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
             foreach (GameObject point in spawnPoints)
@@ -44,6 +56,7 @@ public class KidnapperController : MonoBehaviour
 
         if (agent.remainingDistance < 1)
         {
+            Debug.Log("CHYTENY");
             if (targetIsPlayer)
             {
                 Time.timeScale = 0; //freeze game

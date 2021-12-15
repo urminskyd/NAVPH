@@ -14,6 +14,11 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveDirection = Vector3.zero;
     Animator anim;
 
+    public Light playerLight;
+
+    public float originalRange;
+    public float hideRange;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -29,7 +34,15 @@ public class PlayerController : MonoBehaviour
         moveDirection = transform.TransformDirection(moveDirection);
         moveDirection *= isRunning ? runSpeed : walkSpeed;
 
-        if(Input.GetAxis("Vertical") > 0)
+        if (GameManager.Instance.playerIsHide)
+        {
+            playerLight.range = hideRange;
+        } else {
+            playerLight.range = originalRange;
+        }
+
+
+        if (Input.GetAxis("Vertical") > 0)
             PlaySound(walkSounds);
         else if (isRunning)
             PlaySound(runSounds);

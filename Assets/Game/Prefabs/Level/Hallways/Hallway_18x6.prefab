@@ -149,6 +149,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hallway_12x6
       objectReference: {fileID: 0}
+    - target: {fileID: 4762875100054459662, guid: 78b7a5e16945843e2803dbbc055e6c70, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78b7a5e16945843e2803dbbc055e6c70, type: 3}
 --- !u!4 &8284208474301086417 stripped

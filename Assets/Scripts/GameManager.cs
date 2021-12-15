@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
     {
         statsPanel.GetComponentInChildren<EndGameStats>().setStatsValues(rescued, dead, 0, rescued > (alive + dead));
         statsPanel.SetActive(true);
-        menuPanel.SetActive(true);
+        //menuPanel.SetActive(true);
         gamePanel.SetActive(false);
 
         SceneManager.UnloadSceneAsync("Game");
