@@ -108,8 +108,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f739b95b23cb43d49b74b9bc5662937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPlayer: {fileID: 0}
-  hostageInteractPanel: {fileID: 0}
+  targetPlayer: {fileID: 8802923120712391302, guid: ed57635d63bb4422ab8fe8000b6ffb53, type: 3}
+  hostageInteractPanel: {fileID: 1404837919952843093, guid: f70f7882aaeec41c4baac8d4ca55baee, type: 3}
 --- !u!1 &2299103983823675908
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,7 +219,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 1.5
+  m_Speed: 2
   m_Acceleration: 3
   avoidancePriority: 50
   m_AngularSpeed: 120

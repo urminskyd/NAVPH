@@ -1,6 +1,7 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 public enum GameState { MAIN_MENU }
 
@@ -47,10 +48,16 @@ public class GameManager : MonoBehaviour
         mainMenu.SetActive(true);
     }
 
-    public void LoadScene(string scene)
+    public IEnumerator LoadScene(string scene)
     {
-        SceneManager.LoadScene(scene, LoadSceneMode.Additive);
-        //SceneManager.SetActiveScene(SceneManager.GetSceneByName(scene));
+        AsyncOperation asyncLoadLevel = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
+        while (!asyncLoadLevel.isDone)
+        {
+            Debug.Log("Loading the Scene");
+            yield return null;
+        }
+        bool v = SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(1));
+        Debug.Log(v);
     }
 
     public void HideMenu()
@@ -66,7 +73,7 @@ public class GameManager : MonoBehaviour
 
     public void PlayGame()
     {
-        LoadScene("Game");
+        StartCoroutine(LoadScene("Game"));
         HideMenu();
         gamePanel.SetActive(true);
     }
@@ -84,7 +91,6 @@ public class GameManager : MonoBehaviour
         //menuPanel.SetActive(true);
         gamePanel.SetActive(false);
 
-        SceneManager.UnloadSceneAsync("Game");
         Debug.Log("FINISH");
     }
 
