@@ -1,5 +1,6 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using System.Collections.Generic;
 
 public enum GameState { MAIN_MENU }
 
@@ -20,6 +21,8 @@ public class GameManager : MonoBehaviour
     public int dead { get; set; }
     public int rescued { get; set; }
     public bool playerIsHide { get; set; } = false;
+
+    public List<GameObject> levels;
 
     protected GameManager() {}
 
