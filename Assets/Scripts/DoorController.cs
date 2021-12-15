@@ -3,6 +3,7 @@ using UnityEngine;
 public class DoorController : MonoBehaviour
 {
     public GameObject doorInteractPanel;
+    private GameObject panel;
 
     private bool triggered = false;
     private Collider other;
@@ -17,7 +18,14 @@ public class DoorController : MonoBehaviour
     {
         triggered = false;
         if (other.tag == "Player")
-            doorInteractPanel.SetActive(false);
+            panel.SetActive(false);
+    }
+
+    private void Start()
+    {
+        GameObject canvas = GameObject.FindGameObjectWithTag("Canvas");
+        panel = Instantiate(doorInteractPanel);
+        panel.transform.SetParent(canvas.transform, false);
     }
 
     void Update()
@@ -26,7 +34,7 @@ public class DoorController : MonoBehaviour
         {
             if (other.tag == "Player")
             {
-                doorInteractPanel.SetActive(true);
+                panel.SetActive(true);
                 Animator anim = transform.GetComponentInChildren<Animator>();
                 if (Input.GetButton("InteractDoor"))
                     anim.SetTrigger("OpenClose");

@@ -10,7 +10,7 @@ public class ChooseLevel : MonoBehaviour
     void Start()
     {
         int numOfLevels = GameManager.Instance.levels.Count;
-        for (int index = 0; index < 3; index++)
+        for (int index = 0; index < numOfLevels; index++)
         {
             Button button = Instantiate(levelButtonPrefab);
             button.GetComponentInChildren<Text>().text = "Level " + (index + 1);
@@ -28,6 +28,10 @@ public class ChooseLevel : MonoBehaviour
     {
         int numberIndex = button.name.IndexOfAny("0123456789".ToCharArray());
         int levelNumber = Int32.Parse(button.name.Substring(numberIndex)); //my eyes are burning
-        //GameManager.Instance.PlayGame(levelNumber - 1);
+
+        GameObject audioObject = GameObject.FindGameObjectWithTag("Audio");
+        audioObject.GetComponent<AudioSource>().Stop();
+
+        GameManager.Instance.PlayGame(levelNumber - 1);
     }
 }

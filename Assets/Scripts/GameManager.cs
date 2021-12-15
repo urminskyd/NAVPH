@@ -48,16 +48,14 @@ public class GameManager : MonoBehaviour
         mainMenu.SetActive(true);
     }
 
-    public IEnumerator LoadScene(string scene)
+    public IEnumerator LoadScene(string scene, int levelNumber)
     {
         AsyncOperation asyncLoadLevel = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
         while (!asyncLoadLevel.isDone)
-        {
-            Debug.Log("Loading the Scene");
             yield return null;
-        }
-        bool v = SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(1));
-        Debug.Log(v);
+        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(1));
+        GameObject level = Instantiate(levels[levelNumber], new Vector3(0, 0, 0), Quaternion.identity);
+        SceneManager.MoveGameObjectToScene(level, SceneManager.GetSceneByBuildIndex(1));
     }
 
     public void HideMenu()
@@ -66,14 +64,12 @@ public class GameManager : MonoBehaviour
         GameObject[] menuItems = GameObject.FindGameObjectsWithTag("MenuItem");
 
         foreach (GameObject item in menuItems)
-        {
             item.SetActive(false);
-        }
     }
 
-    public void PlayGame()
+    public void PlayGame(int levelNumber)
     {
-        StartCoroutine(LoadScene("Game"));
+        StartCoroutine(LoadScene("Game", levelNumber));
         HideMenu();
         gamePanel.SetActive(true);
     }
@@ -88,7 +84,6 @@ public class GameManager : MonoBehaviour
     {
         statsPanel.GetComponentInChildren<EndGameStats>().setStatsValues(rescued, dead, 0, rescued > (alive + dead));
         statsPanel.SetActive(true);
-        //menuPanel.SetActive(true);
         gamePanel.SetActive(false);
 
         Debug.Log("FINISH");

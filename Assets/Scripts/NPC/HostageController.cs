@@ -6,7 +6,8 @@ public class HostageController : MonoBehaviour
 {
     public Transform targetPlayer;
     public GameObject hostageInteractPanel;
-    
+    private GameObject panel;
+
     private NavMeshAgent agent;
 
     private bool triggered = false;
@@ -17,25 +18,27 @@ public class HostageController : MonoBehaviour
         if (other.tag == "Player")
         {
             triggered = true;
-            hostageInteractPanel.SetActive(true);
+            panel.SetActive(true);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Player")
-            hostageInteractPanel.SetActive(false);
+            panel.SetActive(false);
     }
 
     void Start()
     {
         agent = GetComponentInParent<NavMeshAgent>();
+
+        GameObject canvas = GameObject.FindGameObjectWithTag("Canvas");
+        panel = Instantiate(hostageInteractPanel);
+        panel.transform.SetParent(canvas.transform, false);
     }
 
     void Update()
     {
-        Debug.Log("isFollowAllowed: " + isFollowAllowed);
-
         agent.destination = targetPlayer.position;
 
         if (Input.GetKey(KeyCode.F))
@@ -43,7 +46,7 @@ public class HostageController : MonoBehaviour
 
         if (triggered && isFollowAllowed)
         {
-            agent.speed = 1.5f;
+            agent.speed = 2f;
             //hostage.GetComponent<Animator>().Play("Z_Walk1_InPlace");
         }
         else

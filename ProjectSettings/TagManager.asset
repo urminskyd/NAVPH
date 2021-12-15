@@ -12,6 +12,9 @@ TagManager:
   - Level
   - Stash
   - HostageSpawnPoint
+  - DoorPanel
+  - Canvas
+  - Audio
   layers:
   - Default
   - TransparentFX
