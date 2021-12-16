@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class HostageEscapePoint : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class HostageEscapePoint : MonoBehaviour
         {
             GameManager.Instance.RescueHostage();
             Debug.Log("Hostage is rescued!");
-            other.GetComponentInParent<HostageController>().enabled = false;
+            other.GetComponentInChildren<HostageController>().StopHostage();
         }
     }
 }

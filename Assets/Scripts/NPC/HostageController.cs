@@ -7,6 +7,8 @@ public class HostageController : MonoBehaviour
     public Transform targetPlayer;
     public GameObject hostageInteractPanel;
     private GameObject panel;
+    Animator animator;
+    private float distanceToPlayer;
 
     private NavMeshAgent agent;
 
@@ -32,27 +34,35 @@ public class HostageController : MonoBehaviour
     {
         agent = GetComponentInParent<NavMeshAgent>();
 
-        GameObject canvas = GameObject.FindGameObjectWithTag("Canvas");
         panel = Instantiate(hostageInteractPanel);
-        panel.transform.SetParent(canvas.transform, false);
+        panel.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, false);
+
+        animator = agent.GetComponentInParent<Animator>();
     }
 
     void Update()
     {
         agent.destination = targetPlayer.position;
+        distanceToPlayer = Vector3.Distance(agent.transform.position, targetPlayer.position);
+        agent.speed = (triggered && isFollowAllowed && distanceToPlayer >= 3) ? 2f : 0f;
+
+        if(isFollowAllowed)
+            agent.transform.LookAt(targetPlayer.transform);
 
         if (Input.GetKey(KeyCode.F))
             isFollowAllowed = !isFollowAllowed;
 
-        if (triggered && isFollowAllowed)
+        if (animator != null) //later delete condition
         {
-            agent.speed = 2f;
-            //hostage.GetComponent<Animator>().Play("Z_Walk1_InPlace");
+            animator.SetFloat("Speed", agent.speed);
+            animator.SetFloat("Direction", Input.GetAxis("Horizontal"));
         }
-        else
-        {
-            agent.speed = 0;
-            //hostage.GetComponent<Animator>().Play("Z_Idle");
-        }
+
+    }
+
+    public void StopHostage()
+    {
+        animator.SetFloat("Speed", 0);
+        enabled = false;
     }
 }

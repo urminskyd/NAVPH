@@ -150,7 +150,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hostageInteractPanel: {fileID: 1404837919952843093, guid: f70f7882aaeec41c4baac8d4ca55baee, type: 3}
-  hostagePrefab: {fileID: 2299103983823675908, guid: cf454e6f987454d138291ef84d9a6d50, type: 3}
+  hostagePrefab: {fileID: 6948349131027262441, guid: 9de44e547fc55458fa72754590c6d92b, type: 3}
+  hostagePrefabs:
+  - {fileID: 6948349131027262441, guid: 9de44e547fc55458fa72754590c6d92b, type: 3}
+  - {fileID: 6687525232665552896, guid: 04b44cf80fc704e14880d4c9a230f018, type: 3}
+  - {fileID: 4991202850259474758, guid: 96410906778a54b639a07574b75ebd97, type: 3}
 --- !u!1001 &136354927488489146
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12636,7 +12640,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 943395698926168219, guid: 1a473f8d956d54b38b8a97fb1e1d08f9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.37
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 943395698926168219, guid: 1a473f8d956d54b38b8a97fb1e1d08f9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12644,7 +12648,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 943395698926168219, guid: 1a473f8d956d54b38b8a97fb1e1d08f9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 13.4
       objectReference: {fileID: 0}
     - target: {fileID: 943395698926168219, guid: 1a473f8d956d54b38b8a97fb1e1d08f9, type: 3}
       propertyPath: m_LocalRotation.w
