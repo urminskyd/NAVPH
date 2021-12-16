@@ -17,14 +17,13 @@ public class HostageSpawn : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
 
-        GameObject randomHostagePrefab = hostagePrefabs[Random.Range(0, hostagePrefabs.Count)];
-
-        int alive = 2;
+        int alive = 3;
         //int alive = GameManager.Instance.alive; //odkomentovat len ked je Menu naloadovane inak gameManager neni vytvoreny a NPE
         GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("HostageSpawnPoint");
         for (int x = 0; x < alive; x++)
         {
-            GameObject go = Instantiate(hostagePrefab, gameObjects[x].transform.position, Quaternion.identity);
+            int index = Random.Range(0, hostagePrefabs.Count);
+            GameObject go = Instantiate(hostagePrefabs[index], gameObjects[x].transform.position, Quaternion.identity);
             go.tag = "Hostage";
 
             HostageController hostageController = go.GetComponentInChildren<HostageController>();

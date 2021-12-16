@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-//[RequireComponent(typeof(NavMeshAgent ))]
+[RequireComponent(typeof(Animator))]
 public class HostageController : MonoBehaviour
 {
     public Transform targetPlayer;
@@ -52,12 +52,8 @@ public class HostageController : MonoBehaviour
         if (Input.GetKey(KeyCode.F))
             isFollowAllowed = !isFollowAllowed;
 
-        if (animator != null) //later delete condition
-        {
-            animator.SetFloat("Speed", agent.speed);
-            animator.SetFloat("Direction", Input.GetAxis("Horizontal"));
-        }
-
+        animator.SetFloat("Speed", agent.speed);
+        animator.SetFloat("Direction", Input.GetAxis("Horizontal"));
     }
 
     public void StopHostage()

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2782848133402611935
+--- !u!1 &3930918890758347087
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6512449776870480252}
-  - component: {fileID: 2085090323515495792}
+  - component: {fileID: 7756544909468252320}
+  - component: {fileID: 1191086334295910795}
   m_Layer: 0
   m_Name: UMARenderer
   m_TagString: Untagged
@@ -17,13 +17,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6512449776870480252
+--- !u!4 &7756544909468252320
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2782848133402611935}
+  m_GameObject: {fileID: 3930918890758347087}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,13 +31,13 @@ Transform:
   m_Father: {fileID: 6948349131027262355}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &2085090323515495792
+--- !u!137 &1191086334295910795
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2782848133402611935}
+  m_GameObject: {fileID: 3930918890758347087}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -215,8 +215,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: -0.00003349781, y: 0.7857654, z: -0.025292605}
-    m_Extent: {x: 0.79332757, y: 0.8836268, z: 0.20613623}
+    m_Center: {x: -0.00003361702, y: 0.78576547, z: -0.02529259}
+    m_Extent: {x: 0.79332757, y: 0.8836269, z: 0.20613639}
   m_DirtyAABB: 0
 --- !u!1 &6948349131018287547
 GameObject:
@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 6948349131027262447}
   - component: {fileID: 6948349131027262354}
   - component: {fileID: 6948349131027262440}
-  - component: {fileID: 4873400400045096615}
+  - component: {fileID: 5632652706113239036}
   m_Layer: 0
   m_Name: HostageWoman
   m_TagString: Hostage
@@ -277,12 +277,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6948349131027262441}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6948349132980966276}
   - {fileID: 6948349131825975506}
-  - {fileID: 6512449776870480252}
+  - {fileID: 7756544909468252320}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   context: {fileID: 0}
-  umaData: {fileID: 4873400400045096615}
+  umaData: {fileID: 5632652706113239036}
   defaultRendererAsset: {fileID: 0}
   umaRecipe: {fileID: 11400000, guid: 52235af6470accd49b10f288d964a658, type: 2}
   umaAdditionalRecipes:
@@ -717,7 +717,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4873400400045096615
+--- !u!114 &5632652706113239036
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -730,7 +730,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   renderers:
-  - {fileID: 2085090323515495792}
+  - {fileID: 1191086334295910795}
   umaGenerator: {fileID: 0}
   atlasResolutionScale: 1
   isMeshDirty: 0

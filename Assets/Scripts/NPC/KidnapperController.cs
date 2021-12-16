@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(Animator))]
 public class KidnapperController : MonoBehaviour
 {
     NavMeshAgent agent;
@@ -11,10 +12,11 @@ public class KidnapperController : MonoBehaviour
     public List<AudioClip> audioClips;
     private AudioSource source;
     private bool targetIsPlayer = false;
+    private Animator animator;
 
     void Start()
     {
-
+        animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         source = GetComponent<AudioSource>();
     }
@@ -55,7 +57,7 @@ public class KidnapperController : MonoBehaviour
             //transform.LookAt(nearestSpawnPoint.transform);
         }
 
-        if (agent.remainingDistance < 1)
+        if (agent.remainingDistance < 2)
         {
             //Debug.LogError("CHYTENY");
             //if (targetIsPlayer)
@@ -67,8 +69,10 @@ public class KidnapperController : MonoBehaviour
         }
         else
         {
-             transform.GetComponent<Animator>().Play("Z_Run_InPlace");
+            animator.SetBool("Walk", true);
         }
+
+        animator.SetBool("Attack", agent.remainingDistance < 2);
 
         if (!source.isPlaying)
         {
