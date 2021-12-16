@@ -75,8 +75,8 @@ public class GameManager : MonoBehaviour
     public void PlayGame(int levelNumber)
     {
         StartCoroutine(LoadScene("Game", levelNumber));
-        GameObject hand = GameObject.Find("NavMeshBaker");
-        print(hand);
+        //GameObject hand = GameObject.Find("NavMeshBaker");
+        //print(hand);
         HideMenu();
         gamePanel.SetActive(true);
     }

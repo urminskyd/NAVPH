@@ -3,15 +3,15 @@ using UnityEngine.AI;
 
 public class NavigationBaker : MonoBehaviour
 {
-    public NavMeshSurface[] surfaces;
+    public NavMeshSurface[] surfaces { get; set; }
 
     // Use this for initialization
     void Start()
     {
-        for (int i = 0; i < surfaces.Length; i++)
-        {
-            surfaces[i].BuildNavMesh();
-        }
+        //for (int i = 0; i < surfaces.Length; i++)
+        //{
+        //    surfaces[i].BuildNavMesh();
+        //}
     }
 
 }
