@@ -1,9 +1,10 @@
 ﻿<Properties StartupConfiguration="{24FDCB56-9E2A-C72A-BA20-2EEB18A6599E}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameAudio.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameManager.cs" Line="73" Column="20" />
-      <File FileName="Assets/Scripts/NPC/HostageController.cs" Line="42" Column="1" />
-      <File FileName="Assets/Scripts/GameAudio.cs" Line="27" Column="34" />
+      <File FileName="Assets/UMA/Core/StandardAssets/UMA/Scripts/UMASimpleLOD.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/NPC/KidnapperController.cs" Line="44" Column="36" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="60" Column="33" />
+      <File FileName="Assets/Scripts/NavigationBaker.cs" Line="10" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,9 +13,20 @@
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
                 <Node name="NPC" expanded="True" />
-                <Node name="Player" expanded="True" />
-                <Node name="UI" expanded="True" />
-                <Node name="GameAudio.cs" selected="True" />
+                <Node name="GameManager.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="UMA_Core" expanded="True">
+              <Node name="Assets" expanded="True">
+                <Node name="UMA" expanded="True">
+                  <Node name="Core" expanded="True">
+                    <Node name="StandardAssets" expanded="True">
+                      <Node name="UMA" expanded="True">
+                        <Node name="Scripts" expanded="True" />
+                      </Node>
+                    </Node>
+                  </Node>
+                </Node>
               </Node>
             </Node>
           </Node>
@@ -25,7 +37,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Addressable__Editor PreferredExecutionTarget="6680cea7-365f-4963-afc2-6c4b6b93b9d8" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b1c1fcdb-0800-4781-b84b-d25d5992b813" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e47508d3-388f-480e-8c4f-5811980f1f0e" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -15,6 +15,7 @@ TagManager:
   - DoorPanel
   - Canvas
   - Audio
+  - NavigationBaker
   layers:
   - Default
   - TransparentFX
