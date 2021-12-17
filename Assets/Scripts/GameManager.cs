@@ -128,7 +128,7 @@ public class GameManager : MonoBehaviour
         else
         {
             GameObject hostage = GameObject.FindGameObjectWithTag("Hostage");
-            Destroy(hostage.gameObject);
+            hostage.GetComponentInChildren<HostageController>().HostageDeath();
         }
     }
 

@@ -26,7 +26,6 @@ public class KidnapperSpawn : MonoBehaviour
                 .Find(g => g.transform.IsChildOf(transform));
             kidnapper.transform.position = spawnPoint.transform.position;
             kidnapper.SetActive(true);
-            Debug.Log("SPAWN kiddnaper");
         }
     }
 

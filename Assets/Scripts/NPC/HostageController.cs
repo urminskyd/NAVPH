@@ -17,7 +17,7 @@ public class HostageController : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && enabled)
         {
             triggered = true;
             panel.SetActive(true);
@@ -59,6 +59,12 @@ public class HostageController : MonoBehaviour
     public void StopHostage()
     {
         animator.SetFloat("Speed", 0);
+        enabled = false;
+    }
+
+    public void HostageDeath()
+    {
+        animator.SetBool("Die", true);
         enabled = false;
     }
 }
