@@ -26,23 +26,10 @@ public class KidnapperController : MonoBehaviour
         if (!GameManager.Instance.playerIsHide)
         {
             agent.destination = targetPlayer.position;
-            //agent.SetDestination(targetPlayer.transform.position);
-
-            //Debug.Log(agent.nextPosition);
-            //Debug.Log(targetPlayer.transform.position);
-            //transform.LookAt(targetPlayer);
             targetIsPlayer = true;
         }
         else
         {
-            //float dist = Vector3.Distance(agent.destination, transform.position);
-            float min = 0;
-
-            //if (dist < min || min == 0)
-            //{
-
-            //}
-
             targetIsPlayer = false;
             GameObject nearestSpawnPoint = null;
 
@@ -50,16 +37,16 @@ public class KidnapperController : MonoBehaviour
             foreach (GameObject point in spawnPoints)
             {
                 float dist = Vector3.Distance(point.transform.position, transform.position);
+                float min = 0;
                 if (dist < min || min == 0)
                     nearestSpawnPoint = point;
             }
             agent.destination = nearestSpawnPoint.transform.position;
-            //transform.LookAt(nearestSpawnPoint.transform);
         }
 
         if (agent.remainingDistance < 2)
         {
-            //Debug.LogError("CHYTENY");
+            Debug.LogError("CHYTENY");
             //if (targetIsPlayer)
             //{
             //    Time.timeScale = 0; //freeze game

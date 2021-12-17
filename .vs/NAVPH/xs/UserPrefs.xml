@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{24FDCB56-9E2A-C72A-BA20-2EEB18A6599E}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/NPC/HostageSpawn.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/NPC/KidnapperSpawn.cs">
     <Files>
       <File FileName="Assets/Scripts/GameManager.cs" Line="59" Column="104" />
-      <File FileName="Assets/Scripts/NPC/HostageController.cs" Line="45" Column="1" />
+      <File FileName="Assets/Scripts/NPC/HostageController.cs" Line="49" Column="28" />
       <File FileName="Assets/Scripts/DoorController.cs" Line="27" Column="46" />
-      <File FileName="Assets/Scripts/NPC/KidnapperController.cs" Line="28" Column="4" />
-      <File FileName="Assets/Scripts/NPC/HostageSpawn.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/NPC/KidnapperController.cs" Line="62" Column="35" />
+      <File FileName="Assets/Scripts/NPC/HostageSpawn.cs" Line="9" Column="43" />
+      <File FileName="Assets/Scripts/NPC/KidnapperSpawn.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,7 +15,7 @@
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
                 <Node name="NPC" expanded="True">
-                  <Node name="HostageSpawn.cs" selected="True" />
+                  <Node name="KidnapperSpawn.cs" selected="True" />
                 </Node>
               </Node>
             </Node>

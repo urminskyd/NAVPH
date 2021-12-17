@@ -58,6 +58,8 @@ public class GameManager : MonoBehaviour
         SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(1));
         GameObject level = Instantiate(levels[levelNumber], new Vector3(0, 0, 0), Quaternion.identity);
         SceneManager.MoveGameObjectToScene(level, SceneManager.GetSceneByBuildIndex(1));
+        HideMenu();
+        gamePanel.SetActive(true);
     }
 
     public void HideMenu()
@@ -71,10 +73,7 @@ public class GameManager : MonoBehaviour
 
     public void PlayGame(int levelNumber)
     {
-       
-        StartCoroutine(LoadScene("Game", levelNumber));
-        HideMenu();
-        gamePanel.SetActive(true);
+       StartCoroutine(LoadScene("Game", levelNumber));
     }
 
     public void QuitGame()
