@@ -1,5 +1,6 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.AI;
 using System.Collections.Generic;
 using System.Collections;
 
@@ -16,7 +17,6 @@ public class GameManager : MonoBehaviour
     public GameObject controlsMenu;
     public GameObject statsPanel;
     public GameObject gamePanel;
-    //public GameObject navigationBaker;
 
     public float timeUntillHostageDeath;
     public int alive;
@@ -54,12 +54,9 @@ public class GameManager : MonoBehaviour
         AsyncOperation asyncLoadLevel = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
         while (!asyncLoadLevel.isDone)
             yield return null;
+
         SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(1));
         GameObject level = Instantiate(levels[levelNumber], new Vector3(0, 0, 0), Quaternion.identity);
-        //GameObject.Find("navigationBaker");
-        //NavigationBaker barker = Instantiate(navigationBaker, new Vector3(0, 0, 0), Quaternion.identity);
-        //barker.surfaces.a = level;
-
         SceneManager.MoveGameObjectToScene(level, SceneManager.GetSceneByBuildIndex(1));
     }
 
@@ -74,9 +71,8 @@ public class GameManager : MonoBehaviour
 
     public void PlayGame(int levelNumber)
     {
+       
         StartCoroutine(LoadScene("Game", levelNumber));
-        //GameObject hand = GameObject.Find("NavMeshBaker");
-        //print(hand);
         HideMenu();
         gamePanel.SetActive(true);
     }

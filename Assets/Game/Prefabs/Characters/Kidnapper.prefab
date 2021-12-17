@@ -2515,7 +2515,6 @@ GameObject:
   - component: {fileID: 1380958063}
   - component: {fileID: 1380958061}
   - component: {fileID: 1380958062}
-  - component: {fileID: 1380958065}
   - component: {fileID: 1376089983365822407}
   m_Layer: 0
   m_Name: Kidnapper
@@ -2523,7 +2522,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6584183472758455488
 Transform:
   m_ObjectHideFlags: 0
@@ -2723,19 +2722,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d425a1ba5e3359d4dbae8797acfcd0e5, type: 3}
   - {fileID: 8300000, guid: 5672cb5df4b75c3479ad96959813e311, type: 3}
   - {fileID: 8300000, guid: efa052ec7030a9e489a69c2e98517db1, type: 3}
---- !u!114 &1380958065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7855665484305600211}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38393967c629644e9b6f28d3d54d42dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!54 &1376089983365822407
 Rigidbody:
   m_ObjectHideFlags: 0
