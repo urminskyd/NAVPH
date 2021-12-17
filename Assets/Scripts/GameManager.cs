@@ -1,16 +1,12 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
-using UnityEngine.AI;
 using System.Collections.Generic;
 using System.Collections;
-
-public enum GameState { MAIN_MENU }
 
 public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
-    public InGameUI inGameUI { get; set; }
-    public GameState gameState { get; private set; }
+    public GameplayUI gameplayUI { get; set; }
     public GameObject menuPanel;
     public GameObject mainMenu;
     public GameObject levelMenu;
@@ -19,12 +15,32 @@ public class GameManager : MonoBehaviour
     public GameObject gamePanel;
 
     public float timeUntillHostageDeath;
-    public int alive;
+    public float remainingTimeInGame { get; set; }
+
     public int dead { get; set; }
     public int rescued { get; set; }
     public bool playerIsHide { get; set; } = false;
 
     public List<GameObject> levels;
+
+    public delegate void OnScoreChange();
+    public event OnScoreChange scoreChanged;
+
+    public int alive;
+
+    public int Alive
+    {
+        get
+        {
+            return alive;
+        }
+
+        set
+        {
+            alive = value;
+            scoreChanged?.Invoke();
+        }
+    }
 
     protected GameManager() {}
 
@@ -47,6 +63,17 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
         mainMenu.SetActive(true);
+        remainingTimeInGame = timeUntillHostageDeath;
+    }
+
+    void Update()
+    {
+        if (SceneManager.GetActiveScene().name.Equals(SceneManager.GetSceneByBuildIndex(1).name))
+        {
+            if (remainingTimeInGame <= 0)
+                KillHostage();
+            remainingTimeInGame = remainingTimeInGame > 0 ? remainingTimeInGame -= Time.deltaTime : timeUntillHostageDeath;
+        }
     }
 
     public IEnumerator LoadScene(string scene, int levelNumber)
@@ -94,9 +121,9 @@ public class GameManager : MonoBehaviour
     public void KillHostage()
     {
         dead += 1;
-        alive -= 1;
+        Alive -= 1;
 
-        if (alive == 0 || dead > (alive + rescued)) // is killed more than half hostages
+        if (Alive == 0 || dead > (alive + rescued)) // is killed more than half hostages
             FinishGame();
         else
         {
@@ -108,9 +135,9 @@ public class GameManager : MonoBehaviour
     public void RescueHostage()
     {
         rescued += 1;
-        alive -= 1;
+        Alive -= 1;
 
-        if (alive == 0)
+        if (Alive == 0)
             FinishGame();
     }
 

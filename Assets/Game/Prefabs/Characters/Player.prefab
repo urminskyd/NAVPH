@@ -3262,9 +3262,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSounds: []
   runSounds: []
-  playerLight: {fileID: 0}
-  originalRange: 0
-  hideRange: 0
+  playerLight: {fileID: 1446821337097437088, guid: 004f4770c3af440bf90498739d1ba1cb, type: 3}
+  originalRange: 20
+  hideRange: 5
 --- !u!1 &8271366867062705183
 GameObject:
   m_ObjectHideFlags: 0

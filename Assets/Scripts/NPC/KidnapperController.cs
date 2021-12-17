@@ -14,6 +14,11 @@ public class KidnapperController : MonoBehaviour
     private bool targetIsPlayer = false;
     private Animator animator;
 
+    void Awake()
+    {
+        GameManager.Instance.scoreChanged += OnAliveChange;
+    }
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -54,11 +59,9 @@ public class KidnapperController : MonoBehaviour
             //}
             //agent.gameObject.SetActive(false);
         }
-        else
-        {
-            animator.SetBool("Walk", true);
-        }
 
+        animator.SetBool("Walk", agent.speed < 3);
+        animator.SetBool("Run", agent.speed >= 3);
         animator.SetBool("Attack", agent.remainingDistance < 2);
 
         if (!source.isPlaying)
@@ -72,5 +75,10 @@ public class KidnapperController : MonoBehaviour
             else
                 waitTimeCountdown -= Time.deltaTime;
         }
+    }
+
+    void OnAliveChange()
+    {
+        agent.speed *= 2f;
     }
 }

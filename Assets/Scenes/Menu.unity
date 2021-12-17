@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.2
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.16394109, g: 0.1678383, b: 0.1565808, a: 0.2}
+  m_IndirectSpecularColor: {r: 0.20151436, g: 0.22700164, b: 0.26709318, a: 0.2}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1028,12 +1028,11 @@ MonoBehaviour:
   controlsMenu: {fileID: 809070637}
   statsPanel: {fileID: 1733696792}
   gamePanel: {fileID: 1309949371}
-  navigationBaker: {fileID: 0}
-  timeUntillHostageDeath: 60
-  alive: 2
+  timeUntillHostageDeath: 10
   levels:
   - {fileID: 136354927416125901, guid: 9e997d9ecb92d43d1ba176d6abc46d4a, type: 3}
   - {fileID: 8830960766295015494, guid: 46ffd2080a286477182422c8b23d7abc, type: 3}
+  alive: 2
 --- !u!4 &417647581
 Transform:
   m_ObjectHideFlags: 0
