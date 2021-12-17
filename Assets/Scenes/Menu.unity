@@ -965,7 +965,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Total time: '
+  m_Text: 'Total time:'
 --- !u!222 &278423210
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1028,7 +1028,7 @@ MonoBehaviour:
   controlsMenu: {fileID: 809070637}
   statsPanel: {fileID: 1733696792}
   gamePanel: {fileID: 1309949371}
-  timeUntillHostageDeath: 40
+  timeUntillHostageDeath: 5
   levels:
   - {fileID: 136354927416125901, guid: 9e997d9ecb92d43d1ba176d6abc46d4a, type: 3}
   - {fileID: 8830960766295015494, guid: 46ffd2080a286477182422c8b23d7abc, type: 3}

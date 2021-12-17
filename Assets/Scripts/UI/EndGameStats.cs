@@ -10,7 +10,7 @@ public class EndGameStats : MonoBehaviour
 
     private int rescued { get; set; }
     private int died { get; set; }
-    private float totalTime { get; set; }
+    private int totalTime { get; set; }
     private string title { get; set; }
 
     void Start()
@@ -18,10 +18,10 @@ public class EndGameStats : MonoBehaviour
         titleText.text = title;
         rescuedText.text = "Rescued: " + rescued;
         diedText.text = "Died: " + died;
-        totalTimeText.text = "Total time: " + totalTime;
+        totalTimeText.text = "Total time: " + totalTime + "s";
     }
 
-    public void setStatsValues(int rescued, int died, float totalTime, bool gameWin)
+    public void setStatsValues(int rescued, int died, int totalTime, bool gameWin)
     {
         title = gameWin ? "GAME WIN" : "GAME OVER";
         this.rescued = rescued;

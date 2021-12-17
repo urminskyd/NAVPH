@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
 
     public float timeUntillHostageDeath;
     public float remainingTimeInGame { get; set; }
+    private float totalTime = 0;
 
     public int dead { get; set; }
     public int rescued { get; set; }
@@ -73,6 +74,7 @@ public class GameManager : MonoBehaviour
             if (remainingTimeInGame <= 0)
                 KillHostage();
             remainingTimeInGame = remainingTimeInGame > 0 ? remainingTimeInGame -= Time.deltaTime : timeUntillHostageDeath;
+            totalTime += Time.deltaTime;
         }
     }
 
@@ -111,7 +113,7 @@ public class GameManager : MonoBehaviour
 
     public void FinishGame()
     {
-        statsPanel.GetComponentInChildren<EndGameStats>().setStatsValues(rescued, dead, 0, rescued > (alive + dead));
+        statsPanel.GetComponentInChildren<EndGameStats>().setStatsValues(rescued, dead, (int)totalTime, rescued > (alive + dead));
         statsPanel.SetActive(true);
         gamePanel.SetActive(false);
 
