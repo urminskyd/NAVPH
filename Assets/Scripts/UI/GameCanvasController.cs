@@ -1,15 +1,13 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameCanvasController : MonoBehaviour
 {
-    public static bool isPaused = false;
+    private bool isPaused;
     public GameObject pauseMenuUI;
 
     void Update()
     {
         if (Input.GetButton("Pause"))
-
         {
             if (isPaused)
                 Resume();
@@ -21,21 +19,15 @@ public class GameCanvasController : MonoBehaviour
     public void Resume()
     {
         isPaused = false;
-        pauseMenuUI.SetActive(isPaused);
-        Time.timeScale = 1f; //unfreeze game
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     void Pause()
     {
         isPaused = true;
-        pauseMenuUI.SetActive(isPaused);
-        Time.timeScale = 0; //freeze game
-    }
-
-    void RestartGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Time.timeScale = 1;
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0;
     }
 
     public void QuitGame()

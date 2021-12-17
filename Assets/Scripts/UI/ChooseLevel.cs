@@ -13,13 +13,16 @@ public class ChooseLevel : MonoBehaviour
         for (int index = 0; index < numOfLevels; index++)
         {
             Button button = Instantiate(levelButtonPrefab);
+
             button.GetComponentInChildren<Text>().text = "Level " + (index + 1);
             button.name = "Level " + (index + 1);
             button.onClick.AddListener(() => StartLevel(button));
             button.transform.SetParent(transform, false);
+
             Vector3 position = button.transform.position;
             position.y -= offset;
             button.transform.position = position;
+
             offset += 50f;
         }
     }

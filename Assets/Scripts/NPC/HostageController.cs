@@ -1,17 +1,17 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(Animator))]
 public class HostageController : MonoBehaviour
 {
     public Transform targetPlayer;
     public GameObject hostageInteractPanel;
     private GameObject panel;
-    Animator animator;
+    private Animator animator;
     private float distanceToPlayer;
 
     private NavMeshAgent agent;
 
+    public int hostageSpeed;
     private bool triggered = false;
     private bool isFollowAllowed = false;
 
@@ -33,18 +33,16 @@ public class HostageController : MonoBehaviour
     void Start()
     {
         agent = GetComponentInParent<NavMeshAgent>();
-
+        animator = agent.GetComponentInParent<Animator>();
         panel = Instantiate(hostageInteractPanel);
         panel.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, false);
-
-        animator = agent.GetComponentInParent<Animator>();
     }
 
     void Update()
     {
         agent.destination = targetPlayer.position;
         distanceToPlayer = Vector3.Distance(agent.transform.position, targetPlayer.position);
-        agent.speed = (triggered && isFollowAllowed && distanceToPlayer >= 3) ? 2f : 0f;
+        agent.speed = (triggered && isFollowAllowed && distanceToPlayer >= agent.stoppingDistance) ? hostageSpeed : 0f;
 
         if(isFollowAllowed)
             agent.transform.LookAt(targetPlayer.transform);

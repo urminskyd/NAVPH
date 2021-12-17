@@ -4,15 +4,18 @@ using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(AudioSource))]
 public class KidnapperController : MonoBehaviour
 {
-    NavMeshAgent agent;
+    public NavMeshAgent agent;
+    private Animator animator;
     public Transform targetPlayer;
-    public float waitTimeCountdown = -1f;
+
     public List<AudioClip> audioClips;
     private AudioSource source;
+
     private bool targetIsPlayer = false;
-    private Animator animator;
+    public float waitTimeCountdown = -1f;
 
     void Awake()
     {

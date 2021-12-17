@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6161792069394706879
+--- !u!1 &6220906429067849796
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 833962671737076702}
-  - component: {fileID: 7617056487642396356}
+  - component: {fileID: 6738842999459751917}
+  - component: {fileID: 8434636953180802347}
   m_Layer: 0
   m_Name: UMARenderer
   m_TagString: Untagged
@@ -17,13 +17,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &833962671737076702
+--- !u!4 &6738842999459751917
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6161792069394706879}
+  m_GameObject: {fileID: 6220906429067849796}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,13 +31,13 @@ Transform:
   m_Father: {fileID: 6687525232665218322}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &7617056487642396356
+--- !u!137 &8434636953180802347
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6161792069394706879}
+  m_GameObject: {fileID: 6220906429067849796}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -3484,6 +3484,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPlayer: {fileID: 8802923120712391302, guid: ed57635d63bb4422ab8fe8000b6ffb53, type: 3}
   hostageInteractPanel: {fileID: 1404837919952843093, guid: f70f7882aaeec41c4baac8d4ca55baee, type: 3}
+  hostageSpeed: 2
 --- !u!1 &6523834672121052215
 GameObject:
   m_ObjectHideFlags: 0
@@ -5189,7 +5190,7 @@ GameObject:
   - component: {fileID: 6687525232665552898}
   - component: {fileID: 6687525232665552901}
   - component: {fileID: 6687525232665552899}
-  - component: {fileID: 3509964307903656284}
+  - component: {fileID: 5317955219804208224}
   m_Layer: 0
   m_Name: HostageMan
   m_TagString: Hostage
@@ -5210,7 +5211,7 @@ Transform:
   m_Children:
   - {fileID: 6523834671982653996}
   - {fileID: 6523834672117494583}
-  - {fileID: 833962671737076702}
+  - {fileID: 6738842999459751917}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5227,7 +5228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   context: {fileID: 0}
-  umaData: {fileID: 3509964307903656284}
+  umaData: {fileID: 5317955219804208224}
   defaultRendererAsset: {fileID: 0}
   umaRecipe: {fileID: 11400000, guid: 1d97eb041589729479af9716fd5b42b3, type: 2}
   umaAdditionalRecipes:
@@ -5600,7 +5601,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3509964307903656284
+--- !u!114 &5317955219804208224
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5613,7 +5614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   renderers:
-  - {fileID: 7617056487642396356}
+  - {fileID: 8434636953180802347}
   umaGenerator: {fileID: 0}
   atlasResolutionScale: 1
   isMeshDirty: 0
