@@ -62,7 +62,6 @@
     <Compile Include="Assets/HandTorch/Scripts/ToggleLight.cs" />
     <Compile Include="Assets/AN Interactive Physical Door Pack/Scripts/AN_HeroInteractive.cs" />
     <Compile Include="Assets/Scripts/CameraController.cs" />
-    <Compile Include="Assets/Dynamic Flickering Light/FlickeringLight.cs" />
     <Compile Include="Assets/Scripts/NPC/Hostage/HostageEscapePoint.cs" />
     <Compile Include="Assets/Scripts/Stash/StashController.cs" />
     <Compile Include="Assets/Scripts/UI/EndGameStats.cs" />
@@ -84,7 +83,6 @@
     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
-    <None Include="Assets/Dynamic Flickering Light/readme.txt" />
     <None Include="Assets/UMA/InternalDataStore/InGame/Resources/Shader/NormalShader.compute" />
     <None Include="Assets/HandTorch/Credits.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />

@@ -24,6 +24,9 @@ public class CameraController : MonoBehaviour
 
     void LateUpdate()
     {
+        cameraOffset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * 4f, Vector3.up) * cameraOffset;   //camera rotation by x axis of mouse (left, right)
+        cameraOffset = Quaternion.AngleAxis(Input.GetAxis("Mouse Y") * 4f, Vector3.left) * cameraOffset; //camera rotation by y axis of mouse (up, down)
+
         Vector3 newPos = target.transform.position + cameraOffset;
         transform.position = Vector3.Slerp(transform.position, newPos, smoothFactor);
         transform.LookAt(target);
