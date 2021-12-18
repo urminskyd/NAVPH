@@ -16,6 +16,7 @@ public class KidnapperController : MonoBehaviour
 
     private bool targetIsPlayer = false;
     public float waitTimeCountdown = -1f;
+    private float remainingDistanceToTarget;
 
     void Awake()
     {
@@ -64,9 +65,11 @@ public class KidnapperController : MonoBehaviour
         checkFinish();
         PlaySound();
 
-        animator.SetBool("Walk", agent.speed < 3);
-        animator.SetBool("Run", agent.speed >= 3);
-        animator.SetBool("Attack", agent.remainingDistance < 2);
+        remainingDistanceToTarget = agent.remainingDistance;
+
+        animator.SetBool("Walk", agent.speed < 3 && remainingDistanceToTarget > 2);
+        animator.SetBool("Run", agent.speed >= 3 && remainingDistanceToTarget > 2);
+        animator.SetBool("Attack", targetIsPlayer && remainingDistanceToTarget <= 2);
     }
 
     void OnAliveChange()
