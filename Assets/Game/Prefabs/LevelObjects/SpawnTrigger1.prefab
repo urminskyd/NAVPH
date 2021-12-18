@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5861007678571368121}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2, y: 1, z: 13.2}
-  m_LocalScale: {x: 60, y: 1, z: 50}
+  m_LocalPosition: {x: 0, y: 1, z: 9}
+  m_LocalScale: {x: 60, y: 2, z: 50}
   m_Children:
   - {fileID: 2960244742437498864}
   m_Father: {fileID: 0}
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bef8855fba2b40f0a5dc570aa5136f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kidnapper: {fileID: 7855665484305600211, guid: 1435a553814de41ed863ccbc4e0d6b4d, type: 3}
+  kidnapperPrefab: {fileID: 7855665484305600211, guid: 1435a553814de41ed863ccbc4e0d6b4d, type: 3}
 --- !u!1 &8795044779117670392
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,8 +135,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8795044779117670392}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.024, y: 0.01, z: -0.019}
-  m_LocalScale: {x: 1.1475774, y: 0.90285575, z: 1.4006205}
+  m_LocalPosition: {x: 0, y: -1.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7052121492038131415}
   m_RootOrder: 0
