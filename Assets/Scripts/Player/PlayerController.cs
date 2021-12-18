@@ -14,8 +14,8 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveDirection = Vector3.zero;
 
     // walk properties
-    private float walkSpeed = 2.2F;
-    private float runSpeed = 3.5F;
+    public float walkSpeed;
+    public float runSpeed;
     private bool isRunning = false;
     
     // character sounds and animations
@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("Backwards", Input.GetButton("Backward"));
         anim.SetBool("Run", isRunning);
 
-        transform.Rotate(0, moveHorizontal*7, 0);
+        transform.Rotate(0, moveHorizontal * 4, 0);
         controller.Move(moveDirection * Time.deltaTime);
 
         if (moveVertical > 0)

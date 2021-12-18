@@ -11,7 +11,7 @@ public class HostageController : MonoBehaviour
 
     private NavMeshAgent agent;
 
-    public int hostageSpeed;
+    public float hostageSpeed;
     private bool isFollowAllowed = false;
     private bool triggered = false;
 

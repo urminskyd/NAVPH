@@ -3261,6 +3261,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4c93c074f99e4766b08a1860797a7b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walkSpeed: 2.5
+  runSpeed: 4
   walkSounds:
   - {fileID: 8300000, guid: 1f0199a4c6005ec4abbb302f71bc036d, type: 3}
   - {fileID: 8300000, guid: 53e2adf2ac488ef46bb2b4074de9e363, type: 3}

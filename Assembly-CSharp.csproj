@@ -57,25 +57,19 @@
     <Compile Include="Assets/Scripts/UI/GameCanvasController.cs" />
     <Compile Include="Assets/HandTorch/Scripts/RotateObject.cs" />
     <Compile Include="Assets/Scripts/NPC/Kidnapper/KidnapperSpawn.cs" />
-    <Compile Include="Assets/AN Interactive Physical Door Pack/Scripts/AN_PlugScript.cs" />
     <Compile Include="Assets/Scripts/DoorController.cs" />
     <Compile Include="Assets/HandTorch/Scripts/ToggleLight.cs" />
-    <Compile Include="Assets/AN Interactive Physical Door Pack/Scripts/AN_HeroInteractive.cs" />
     <Compile Include="Assets/Scripts/CameraController.cs" />
     <Compile Include="Assets/Scripts/NPC/Hostage/HostageEscapePoint.cs" />
     <Compile Include="Assets/Scripts/Stash/StashController.cs" />
     <Compile Include="Assets/Scripts/UI/EndGameStats.cs" />
-    <Compile Include="Assets/AN Interactive Physical Door Pack/Scripts/AN_HeroController.cs" />
-    <Compile Include="Assets/AN Interactive Physical Door Pack/Scripts/AN_Button.cs" />
     <Compile Include="Assets/Scripts/GameAudio.cs" />
     <Compile Include="Assets/Scripts/UI/GameplayUI.cs" />
     <Compile Include="Assets/Scripts/GameManager.cs" />
-    <Compile Include="Assets/AN Interactive Physical Door Pack/Scripts/AN_DoorKey.cs" />
     <Compile Include="Assets/Scripts/NPC/Hostage/HostageController.cs" />
     <Compile Include="Assets/Scripts/NPC/Kidnapper/KidnapperController.cs" />
     <Compile Include="Assets/Scripts/UI/ChooseLevel.cs" />
     <Compile Include="Assets/Scripts/Player/PlayerController.cs" />
-    <Compile Include="Assets/AN Interactive Physical Door Pack/Scripts/AN_DoorScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

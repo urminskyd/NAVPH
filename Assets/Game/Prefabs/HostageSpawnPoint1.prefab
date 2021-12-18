@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 943395698926168219}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HostageSpawnPoint1
   m_TagString: HostageSpawnPoint
   m_Icon: {fileID: 0}
