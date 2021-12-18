@@ -16,6 +16,7 @@ TagManager:
   - Canvas
   - Audio
   - NavigationBaker
+  - Kidnapper
   layers:
   - Default
   - TransparentFX

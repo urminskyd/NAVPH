@@ -8,7 +8,7 @@ public class DoorController : MonoBehaviour
     private bool triggered = false;
     private Collider other;
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         triggered = true;
         this.other = other;

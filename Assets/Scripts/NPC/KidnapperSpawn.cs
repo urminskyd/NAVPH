@@ -3,13 +3,20 @@ using UnityEngine;
 
 public class KidnapperSpawn : MonoBehaviour
 {
-    public GameObject kidnapper;
+    private GameObject kidnapper;
     private bool triggered = false;
+
+    private void Awake()
+    {
+        kidnapper = GameObject.FindGameObjectWithTag("Kidnapper");
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
+        {
             triggered = true;
+        }
     }
 
     private void OnTriggerExit()
@@ -20,6 +27,8 @@ public class KidnapperSpawn : MonoBehaviour
 
     void Update()
     {
+        //Debug.LogWarning(kidnapper);
+
         if (triggered && !kidnapper.activeSelf && !GameManager.Instance.playerIsHide)
         {
             GameObject spawnPoint = new List<GameObject>(GameObject.FindGameObjectsWithTag("SpawnPoint"))

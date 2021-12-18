@@ -2518,11 +2518,11 @@ GameObject:
   - component: {fileID: 1376089983365822407}
   m_Layer: 0
   m_Name: Kidnapper
-  m_TagString: Untagged
+  m_TagString: Kidnapper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6584183472758455488
 Transform:
   m_ObjectHideFlags: 0
@@ -2715,13 +2715,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPlayer: {fileID: 0}
-  waitTimeCountdown: -1
   audioClips:
   - {fileID: 8300000, guid: e4b15ccc6c1d8aa44be86a9f01a22c0f, type: 3}
   - {fileID: 8300000, guid: cc0b31f8043b6854dbcba03f9e9f3ae8, type: 3}
   - {fileID: 8300000, guid: d425a1ba5e3359d4dbae8797acfcd0e5, type: 3}
   - {fileID: 8300000, guid: 5672cb5df4b75c3479ad96959813e311, type: 3}
   - {fileID: 8300000, guid: efa052ec7030a9e489a69c2e98517db1, type: 3}
+  waitTimeCountdown: -1
 --- !u!54 &1376089983365822407
 Rigidbody:
   m_ObjectHideFlags: 0
