@@ -10,12 +10,13 @@ public class HostageSpawn : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(LateStart()); //delayed start lebo inak to hodi do sceny Menu a nie Game
+        LateStart(); //delayed start lebo inak to hodi do sceny Menu a nie Game
     }
 
-    IEnumerator LateStart()
+    void LateStart()
     {
-        yield return new WaitForSeconds(2);
+        //yield return null;
+        //yield return new WaitForSeconds(2);
 
         int alive = GameManager.Instance.alive;
         GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("HostageSpawnPoint");

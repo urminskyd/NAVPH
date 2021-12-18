@@ -24,21 +24,21 @@ public class HostageController : MonoBehaviour
         }
     }
 
-    //private void OnTriggerStay(Collider other)
-    //{
-    //    Debug.Log(other.tag == "Player" && enabled && triggered);
-    //    if (other.tag == "Player" && enabled && triggered && Input.GetKeyDown(KeyCode.F))
-    //    {
-    //        isFollowAllowed = true;
-    //    }
-    //}
-
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Player")
         {
             triggered = false;
             panel.SetActive(false);
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Player" && Input.GetKeyDown(KeyCode.F))
+        {
+            Debug.Log("NAHANAM");
+            isFollowAllowed = !isFollowAllowed;
         }
     }
 
@@ -52,16 +52,12 @@ public class HostageController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            //Debug.Log("HALOO");
-            isFollowAllowed = !isFollowAllowed;
-        }
-
         agent.destination = targetPlayer.position;
         distanceToPlayer = Vector3.Distance(agent.transform.position, targetPlayer.position);
         //agent.speed = (triggered && isFollowAllowed && distanceToPlayer >= agent.stoppingDistance) ? hostageSpeed : 0f;
-        agent.speed = (isFollowAllowed && distanceToPlayer >= agent.stoppingDistance) ? hostageSpeed : 0f;
+        //agent.speed = (isFollowAllowed && distanceToPlayer >= agent.stoppingDistance) ? hostageSpeed : 0f;
+
+        agent.speed = (isFollowAllowed) ? hostageSpeed : 0f;
 
         animator.SetFloat("Speed", agent.speed);
         animator.SetFloat("Direction", Input.GetAxis("Horizontal"));
