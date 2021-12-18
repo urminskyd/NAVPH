@@ -291,6 +291,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3545320244552117896}
     m_Modifications:
+    - target: {fileID: 785510770190857969, guid: 69a5d291dd7b2423480223467f21bddb, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5244794543959558893, guid: 69a5d291dd7b2423480223467f21bddb, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -335,9 +339,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6139422899811471769, guid: 69a5d291dd7b2423480223467f21bddb, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6520705545154970373, guid: 69a5d291dd7b2423480223467f21bddb, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6692928760410008090, guid: 69a5d291dd7b2423480223467f21bddb, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7761566607339709006, guid: 69a5d291dd7b2423480223467f21bddb, type: 3}
       propertyPath: m_Name
       value: Floor_6x6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7761566607339709006, guid: 69a5d291dd7b2423480223467f21bddb, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69a5d291dd7b2423480223467f21bddb, type: 3}
