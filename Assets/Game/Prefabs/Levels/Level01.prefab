@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1586779912219128212}
-  sensitivity: 5
+  sensitivity: 4
   smoothFactor: 0.5
   isVerticalRotationEnabled: 0
 --- !u!1001 &136354927488489146

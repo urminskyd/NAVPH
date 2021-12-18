@@ -3,19 +3,19 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public Transform target;
-    private Vector3 cameraOffset;
     public float sensitivity;
     public float smoothFactor = 0.5f;
     public bool isVerticalRotationEnabled = false;
 
     private Camera cam;
     private float scroll;
-
+    private Vector3 cameraOffset;
     private Quaternion camRotation;
 
     void Start()
     {
         camRotation = transform.rotation;
+        camRotation.x = 20f;
         cam = Camera.main;
         cameraOffset = transform.position - target.transform.position;
     }
@@ -31,12 +31,12 @@ public class CameraController : MonoBehaviour
 
     void LateUpdate()
     {
-        camRotation.y += Input.GetAxis("Mouse X") * 4f;
+        camRotation.y += Input.GetAxis("Mouse X") * sensitivity;
         camRotation.y = Mathf.Clamp(camRotation.y, -90, 90);
 
         if (isVerticalRotationEnabled)
         {
-            camRotation.x += Input.GetAxis("Mouse Y") * 6f * (-1);
+            camRotation.x += Input.GetAxis("Mouse Y") * (sensitivity * 1.5f) * (-1);
             camRotation.x = Mathf.Clamp(camRotation.x, -45, 75);
         }
 
