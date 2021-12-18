@@ -8,11 +8,8 @@ public class GameManager : MonoBehaviour
     private static GameManager instance;
 
     //panels
-    public GameplayUI gameplayUI { get; set; } //not used
     public GameObject menuPanel;
     public GameObject mainMenu;
-    public GameObject levelMenu;    //not used
-    public GameObject controlsMenu; //not used
     public GameObject statsPanel;
     public GameObject gamePanel;
 
