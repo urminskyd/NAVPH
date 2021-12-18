@@ -11,6 +11,8 @@ public class HostageSpawn : MonoBehaviour
     {
         int alive = GameManager.Instance.alive;
         GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("HostageSpawnPoint");
+        if (gameObjects.Length != alive)
+            Debug.LogWarning("Number of hostage spawn points doesn't match with number of hostages!");
 
         for (int x = 0; x < alive; x++)
         {
