@@ -8,7 +8,7 @@ public class KidnapperSpawn : MonoBehaviour
 
     private void Awake()
     {
-        kidnapper = GameObject.FindGameObjectWithTag("Kidnapper");
+        kidnapper = GameObject.Find("Kidnapper");
     }
 
     private void OnTriggerEnter(Collider other)
@@ -27,7 +27,7 @@ public class KidnapperSpawn : MonoBehaviour
 
     void Update()
     {
-        if (triggered && !kidnapper.activeSelf && !GameManager.Instance.playerIsHide)
+        if (triggered && !kidnapper.activeInHierarchy && !GameManager.Instance.playerIsHide)
         {
             GameObject spawnPoint = new List<GameObject>(GameObject.FindGameObjectsWithTag("SpawnPoint"))
                 .Find(g => g.transform.IsChildOf(transform));
