@@ -15,11 +15,6 @@ public class GameAudio : MonoBehaviour
 
     void Update()
     {
-        PlayGameSound();
-    }
-
-    void PlayGameSound()
-    {
         if (!source.isPlaying)
         {
             if (waitTimeCountdown < 0f)

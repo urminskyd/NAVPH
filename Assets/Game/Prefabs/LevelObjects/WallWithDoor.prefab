@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 5290552595106972863}
   - component: {fileID: 932140904734641499}
   - component: {fileID: 4909364630035488665}
+  - component: {fileID: 408486637032170335}
   m_Layer: 6
   m_Name: HostageEscapeTrigger
   m_TagString: Door
@@ -109,6 +110,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &408486637032170335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5020559338846198253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 983504abd9cad49f7ac0f5c1cd3c5eb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!64 &157304539902096753
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -135,6 +148,7 @@ GameObject:
   - component: {fileID: 6166297883622383665}
   - component: {fileID: 6166297883622383664}
   - component: {fileID: 6166297883622383667}
+  - component: {fileID: 953832632649473641}
   m_Layer: 6
   m_Name: DoorTrigger
   m_TagString: Door
@@ -219,6 +233,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &953832632649473641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6166297883622383669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16967e52448c1466596538f8b819273e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorInteractPanel: {fileID: 609401952484599966, guid: 69e6ec05ff489496cb574b68c760ffe7, type: 3}
 --- !u!1 &6166297883694300558
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,8 +333,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8998506880046940170}
-  m_LocalRotation: {x: -0, y: 0.9997862, z: -0, w: -0.020679183}
-  m_LocalPosition: {x: 9.87, y: -3.04, z: -23.01}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.8, y: -2.08, z: 0}
   m_LocalScale: {x: 1.12, y: 1, z: 1}
   m_Children:
   - {fileID: 6630738904050415929}
@@ -318,7 +345,7 @@ Transform:
   - {fileID: 4050567077881638140}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 182.37, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3600458475551534626
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -537,14 +564,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3a2e9c7a879b7d41b29957e6f9ed6c0, type: 3}
---- !u!1 &6166297884676097852 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: c3a2e9c7a879b7d41b29957e6f9ed6c0, type: 3}
-  m_PrefabInstance: {fileID: 6166297884676129180}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6166297884676004636 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: c3a2e9c7a879b7d41b29957e6f9ed6c0, type: 3}
+  m_PrefabInstance: {fileID: 6166297884676129180}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6166297884676097852 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: c3a2e9c7a879b7d41b29957e6f9ed6c0, type: 3}
   m_PrefabInstance: {fileID: 6166297884676129180}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8998506878787344382

@@ -6,23 +6,26 @@ using System.Collections;
 public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
-    public GameplayUI gameplayUI { get; set; }
+
+    //panels
+    public GameplayUI gameplayUI { get; set; } //not used
     public GameObject menuPanel;
     public GameObject mainMenu;
-    public GameObject levelMenu;
-    public GameObject controlsMenu;
+    public GameObject levelMenu;    //not used
+    public GameObject controlsMenu; //not used
     public GameObject statsPanel;
     public GameObject gamePanel;
 
     public float timeUntillHostageDeath;
     public float remainingTimeInGame { get; set; }
-    private float totalTime = 0;
-
-    public int dead { get; set; }
-    public int rescued { get; set; }
     public bool playerIsHide { get; set; } = false;
 
     public List<GameObject> levels;
+
+    //hostages state variables
+    private float totalTime = 0;
+    public int dead { get; set; }
+    public int rescued { get; set; }
 
     public delegate void OnScoreChange();
     public event OnScoreChange scoreChanged;
@@ -53,9 +56,7 @@ public class GameManager : MonoBehaviour
             {
                 instance = new GameManager();
                 DontDestroyOnLoad(instance);
-                Debug.Log("CREATING GAME MANAGER");
             }
-
             return instance;
         }
     }
@@ -84,9 +85,9 @@ public class GameManager : MonoBehaviour
         while (!asyncLoadLevel.isDone)
             yield return null;
 
-        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(1));
-        GameObject level = Instantiate(levels[levelNumber], new Vector3(0, 0, 0), Quaternion.identity);
-        SceneManager.MoveGameObjectToScene(level, SceneManager.GetSceneByBuildIndex(1));
+        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(1)); //set "Game" as active scene
+        Instantiate(levels[levelNumber], new Vector3(0, 0, 0), Quaternion.identity); //load chosen level
+
         HideMenu();
         gamePanel.SetActive(true);
     }
@@ -113,11 +114,10 @@ public class GameManager : MonoBehaviour
 
     public void FinishGame()
     {
-        statsPanel.GetComponentInChildren<EndGameStats>().setStatsValues(rescued, dead, (int)totalTime, rescued > (alive + dead));
+        statsPanel.GetComponentInChildren<EndGameStats>().
+            setStatsValues(rescued, dead, (int)totalTime, rescued > (alive + dead));
         statsPanel.SetActive(true);
         gamePanel.SetActive(false);
-
-        Debug.Log("FINISH");
     }
 
     public void KillHostage()
@@ -125,9 +125,9 @@ public class GameManager : MonoBehaviour
         dead += 1;
         Alive -= 1;
 
-        if (Alive == 0 || dead > (alive + rescued)) // is killed more than half hostages
+        if (Alive == 0 || dead > (alive + rescued)) //if killed more than half hostages, game over
             FinishGame();
-        else
+        else //kill hostage
         {
             GameObject hostage = GameObject.FindGameObjectWithTag("Hostage");
             hostage.GetComponentInChildren<HostageController>().HostageDeath();

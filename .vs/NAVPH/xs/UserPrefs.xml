@@ -1,23 +1,18 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/NPC/HostageSpawn.cs">
+﻿<Properties StartupConfiguration="{24FDCB56-9E2A-C72A-BA20-2EEB18A6599E}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/NPC/HostageController.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameManager.cs" Line="104" Column="6" />
-      <File FileName="Assets/Scripts/NPC/HostageController.cs" Line="35" Column="1" />
-      <File FileName="Assets/Scripts/NPC/KidnapperController.cs" Line="34" Column="62" />
-      <File FileName="Assets/Scripts/NPC/HostageSpawn.cs" Line="18" Column="44" />
+      <File FileName="Assets/Scripts/CameraController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="20" Column="32" />
+      <File FileName="Assets/Scripts/NPC/HostageController.cs" Line="52" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="NAVPH" expanded="True">
-            <Node name="Addressable_Editor" expanded="True" />
-            <Node name="Assembly-CSharp" expanded="True">
-              <Node name="Assets" expanded="True">
-                <Node name="Scripts" expanded="True">
-                  <Node name="NPC" expanded="True">
-                    <Node name="HostageSpawn.cs" selected="True" />
-                  </Node>
-                  <Node name="Stash" expanded="True" />
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="NPC" expanded="True">
+                  <Node name="HostageController.cs" selected="True" />
                 </Node>
               </Node>
             </Node>
@@ -29,7 +24,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Addressable__Editor PreferredExecutionTarget="6680cea7-365f-4963-afc2-6c4b6b93b9d8" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a63d78b0-bc29-4647-9c8a-04c1d6c38d1c" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7f9817f5-ba4e-43c3-b26e-b64bd0b2750c" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
