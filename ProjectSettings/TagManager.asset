@@ -4,19 +4,18 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Door
   - Hostage
   - SpawnPoint
   - MenuItem
-  - HostageEscapeSpace
-  - Level
   - Stash
   - HostageSpawnPoint
-  - DoorPanel
   - Canvas
   - Audio
-  - NavigationBaker
   - Kidnapper
+  - Level
+  - Door
+  - HostageEscapeSpace
+  - DoorPanel
   layers:
   - Default
   - TransparentFX

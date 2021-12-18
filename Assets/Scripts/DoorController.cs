@@ -4,21 +4,23 @@ public class DoorController : MonoBehaviour
 {
     public GameObject doorInteractPanel;
     private GameObject panel;
-
     private bool triggered = false;
-    private Collider other;
 
     private void OnTriggerEnter(Collider other)
     {
-        triggered = true;
-        this.other = other;
+        if (other.tag == "Player")
+        {
+            panel.SetActive(true);
+            triggered = true;
+        }
     }
-
     private void OnTriggerExit(Collider other)
     {
-        triggered = false;
         if (other.tag == "Player")
+        {
             panel.SetActive(false);
+            triggered = false;
+        }
     }
 
     private void Start()
@@ -30,15 +32,7 @@ public class DoorController : MonoBehaviour
 
     void Update()
     {
-        if (triggered)
-        {
-            if (other.tag == "Player")
-            {
-                panel.SetActive(true);
-                Animator anim = transform.GetComponentInChildren<Animator>();
-                if (Input.GetButton("InteractDoor"))
-                    anim.SetTrigger("OpenClose");
-            }
-        }
+        if (triggered && Input.GetButton("InteractDoor"))
+            transform.GetComponentInChildren<Animator>().SetTrigger("OpenClose");
     }
 }
