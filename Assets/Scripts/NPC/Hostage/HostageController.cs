@@ -13,25 +13,23 @@ public class HostageController : MonoBehaviour
 
     public int hostageSpeed;
     private bool isFollowAllowed = false;
+    private bool triggered = false;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player" && enabled)
+        {
+            triggered = true;
             panel.SetActive(true);
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Player")
-            panel.SetActive(false);
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.tag == "Player" && Input.GetButton("InteractHostage"))
         {
-            Debug.Log("NAHANAM");
-            isFollowAllowed = !isFollowAllowed;
+            panel.SetActive(false);
+            triggered = false;
         }
     }
 
@@ -45,10 +43,22 @@ public class HostageController : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetButtonDown("InteractHostage"))
+        {
+            if (triggered)
+            {
+                isFollowAllowed = !isFollowAllowed;
+            }
+            else
+            {
+                isFollowAllowed = false;
+            }
+        }
+
         distanceToPlayer = Vector3.Distance(agent.transform.position, targetPlayer.position);
 
         agent.destination = targetPlayer.position;
-        agent.speed = (isFollowAllowed && distanceToPlayer >= agent.stoppingDistance) ? hostageSpeed : 0f;
+        agent.speed = (enabled && isFollowAllowed && distanceToPlayer >= agent.stoppingDistance) ? hostageSpeed : 0f;
 
         animator.SetFloat("Speed", agent.speed);
         animator.SetFloat("Direction", Input.GetAxis("Horizontal"));
