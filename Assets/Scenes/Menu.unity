@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.2
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.003664379, g: 0.0038156626, b: 0.0039044574, a: 0.2}
+  m_IndirectSpecularColor: {r: 0.0040749838, g: 0.004202121, b: 0.004276231, a: 0.2}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1026,9 +1026,9 @@ MonoBehaviour:
   mainMenu: {fileID: 1061213952}
   statsPanel: {fileID: 1733696792}
   gamePanel: {fileID: 1309949371}
-  LevelOneTimeForHostageDie: 200
-  LevelTwoTimeForHostageDie: 350
-  LevelThreeTimeForHostageDie: 500
+  LevelOneTimeForHostageDie: 250
+  LevelTwoTimeForHostageDie: 400
+  LevelThreeTimeForHostageDie: 700
   levels:
   - {fileID: 136354927416125901, guid: 9e997d9ecb92d43d1ba176d6abc46d4a, type: 3}
   - {fileID: 8830960766295015494, guid: 46ffd2080a286477182422c8b23d7abc, type: 3}
