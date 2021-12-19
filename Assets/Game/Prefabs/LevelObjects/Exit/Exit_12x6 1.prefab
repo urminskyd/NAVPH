@@ -145,6 +145,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3280461441107679943, guid: b83aba460b4594909ac00fac5113ff48, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6034087180790668618, guid: b83aba460b4594909ac00fac5113ff48, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7997625336145832815, guid: b83aba460b4594909ac00fac5113ff48, type: 3}
       propertyPath: m_Name
       value: WallWithDoor
