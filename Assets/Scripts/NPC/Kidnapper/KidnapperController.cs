@@ -45,12 +45,12 @@ public class KidnapperController : MonoBehaviour
     {
         targetIsPlayer = false;
         GameObject nearestSpawnPoint = null;
-
         GameObject[] spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
+
+        float min = 0;
         foreach (GameObject point in spawnPoints)
         {
             float dist = Vector3.Distance(point.transform.position, transform.position);
-            float min = 0;
             if (dist < min || min == 0)
                 nearestSpawnPoint = point;
         }

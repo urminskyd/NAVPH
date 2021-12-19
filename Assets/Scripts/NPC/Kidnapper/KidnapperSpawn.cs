@@ -12,7 +12,8 @@ public class KidnapperSpawn : MonoBehaviour
         {
             GameManager.Instance.playerIsHide = false;
 
-            if(Random.value > 0.5 && !GameObject.FindGameObjectWithTag("Kidnapper"))
+            //bool v = Random.value > 0.5;
+            if (!GameObject.FindGameObjectWithTag("Kidnapper"))
             { 
                 GameObject spawnPoint = new List<GameObject>(GameObject.FindGameObjectsWithTag("SpawnPoint"))
                     .Find(g => g.transform.IsChildOf(transform));
