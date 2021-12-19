@@ -1026,9 +1026,9 @@ MonoBehaviour:
   mainMenu: {fileID: 1061213952}
   statsPanel: {fileID: 1733696792}
   gamePanel: {fileID: 1309949371}
-  LevelOneTimeForHostageDie: 60
-  LevelTwoTimeForHostageDie: 90
-  LevelThreeTimeForHostageDie: 120
+  LevelOneTimeForHostageDie: 90
+  LevelTwoTimeForHostageDie: 120
+  LevelThreeTimeForHostageDie: 150
   levels:
   - {fileID: 136354927416125901, guid: 9e997d9ecb92d43d1ba176d6abc46d4a, type: 3}
   - {fileID: 8830960766295015494, guid: 46ffd2080a286477182422c8b23d7abc, type: 3}
