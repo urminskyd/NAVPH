@@ -1,9 +1,14 @@
-﻿<Properties StartupConfiguration="{24FDCB56-9E2A-C72A-BA20-2EEB18A6599E}|">
+﻿<Properties StartupConfiguration="{B0AFA06A-CA56-0D66-25C1-EA03FE5043D9}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/NPC/Kidnapper/KidnapperSpawn.cs">
     <Files>
-      <File FileName="Assets/Scripts/NPC/Kidnapper/KidnapperSpawn.cs" Line="16" Column="1" />
-      <File FileName="Assets/Scripts/NPC/Hostage/HostageSpawn.cs" Line="18" Column="40" />
-      <File FileName="Assets/Scripts/NPC/Hostage/HostageController.cs" Line="1" Column="1" />
+      <File FileName="Assets/UMA/Core/Extensions/DynamicCharacterSystem/Scripts/DynamicCharacterAvatar.cs" Line="142" Column="22" />
+      <File FileName="Assets/Scripts/NPC/Hostage/HostageSpawn.cs" Line="18" Column="120" />
+      <File FileName="Assets/Scripts/NPC/Hostage/HostageController.cs" Line="70" Column="25" />
+      <File FileName="Assets/Scripts/DoorController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/NPC/Hostage/HostageEscapePoint.cs" Line="21" Column="11" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="41" Column="23" />
+      <File FileName="Assets/Scripts/NPC/Kidnapper/KidnapperController.cs" Line="24" Column="14" />
+      <File FileName="Assets/Scripts/NPC/Kidnapper/KidnapperSpawn.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,8 +22,6 @@
                     <Node name="KidnapperSpawn.cs" selected="True" />
                   </Node>
                 </Node>
-                <Node name="Player" expanded="True" />
-                <Node name="UI" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -28,8 +31,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Addressable__Editor PreferredExecutionTarget="6680cea7-365f-4963-afc2-6c4b6b93b9d8" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ce7257b1-7cb2-43e0-bd12-4618c095dc51" />
+  <MonoDevelop.Ide.ItemProperties.Addressable__Editor PreferredExecutionTarget="a63d78b0-bc29-4647-9c8a-04c1d6c38d1c" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

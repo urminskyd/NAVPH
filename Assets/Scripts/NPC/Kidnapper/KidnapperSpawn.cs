@@ -10,17 +10,26 @@ public class KidnapperSpawn : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            GameObject spawnPoint = new List<GameObject>(GameObject.FindGameObjectsWithTag("SpawnPoint"))
-                .Find(g => g.transform.IsChildOf(transform));
-            kidnapperPrefab.transform.position = spawnPoint.transform.position;
+            GameManager.Instance.playerIsHide = false;
 
-            kidnapper = Instantiate(kidnapperPrefab, spawnPoint.transform.position, Quaternion.identity);
-            kidnapper.GetComponent<KidnapperController>().targetPlayer = other.gameObject.transform;
+            if(!GameObject.FindGameObjectWithTag("Kidnapper"))
+            { 
+                GameObject spawnPoint = new List<GameObject>(GameObject.FindGameObjectsWithTag("SpawnPoint"))
+                    .Find(g => g.transform.IsChildOf(transform));
+                kidnapperPrefab.transform.position = spawnPoint.transform.position;
+
+                kidnapper = Instantiate(kidnapperPrefab, spawnPoint.transform.position, Quaternion.identity);
+                kidnapper.GetComponent<KidnapperController>().targetPlayer = other.gameObject.transform;
+            }
         }
     }
 
-    private void OnTriggerExit()
+    private void OnTriggerExit(Collider other)
     {
-        Destroy(kidnapper);
+        if (other.tag == "Player")
+        {
+            GameManager.Instance.playerIsHide = true;
+            //Destroy(kidnapper);
+        }
     }
 }

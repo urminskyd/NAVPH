@@ -20,15 +20,17 @@ public class KidnapperController : MonoBehaviour
 
     void Awake()
     {
-        GameManager.Instance.scoreChanged += OnAliveChange;
-    }
-
-    void Start()
-    {
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         source = GetComponent<AudioSource>();
+
+        GameManager.Instance.scoreChanged += OnAliveChange;
     }
+
+    //void Start()
+    //{
+       
+    //}
 
     private void checkFinish()
     {
@@ -39,29 +41,31 @@ public class KidnapperController : MonoBehaviour
         }
     }
 
+    private void goToSpawn()
+    {
+        targetIsPlayer = false;
+        GameObject nearestSpawnPoint = null;
+
+        GameObject[] spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
+        foreach (GameObject point in spawnPoints)
+        {
+            float dist = Vector3.Distance(point.transform.position, transform.position);
+            float min = 0;
+            if (dist < min || min == 0)
+                nearestSpawnPoint = point;
+        }
+        agent.destination = nearestSpawnPoint.transform.position;
+
+        float distToDestroy = Vector3.Distance(targetPlayer.position, transform.position);
+
+        if (distToDestroy > 20)
+        {
+            Destroy(GameObject.FindGameObjectWithTag("Kidnapper"));
+        }
+    }
+
     void Update()
     {
-        if (!GameManager.Instance.playerIsHide)
-        {
-            agent.destination = targetPlayer.position;
-            targetIsPlayer = true;
-        }
-        else
-        {
-            targetIsPlayer = false;
-            GameObject nearestSpawnPoint = null;
-
-            GameObject[] spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
-            foreach (GameObject point in spawnPoints)
-            {
-                float dist = Vector3.Distance(point.transform.position, transform.position);
-                float min = 0;
-                if (dist < min || min == 0)
-                    nearestSpawnPoint = point;
-            }
-            agent.destination = nearestSpawnPoint.transform.position;
-        }
-
         checkFinish();
         PlaySound();
 
@@ -70,11 +74,25 @@ public class KidnapperController : MonoBehaviour
         animator.SetBool("Walk", agent.speed < 3 && remainingDistanceToTarget > 2);
         animator.SetBool("Run", agent.speed >= 3 && remainingDistanceToTarget > 2);
         animator.SetBool("Attack", targetIsPlayer && remainingDistanceToTarget <= 2);
+
+        if (!GameManager.Instance.playerIsHide)
+        {
+            agent.destination = targetPlayer.position;
+            targetIsPlayer = true;
+        }
+        else
+        {
+            goToSpawn();
+        }
+      
     }
 
     void OnAliveChange()
     {
-        agent.speed *= 2f;
+        if (agent)
+        {
+            agent.speed *= 2f;
+        }
     }
 
     void PlaySound()

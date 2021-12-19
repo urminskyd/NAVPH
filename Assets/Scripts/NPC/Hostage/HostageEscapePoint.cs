@@ -2,10 +2,12 @@ using UnityEngine;
 
 public class HostageEscapePoint : MonoBehaviour
 {
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Hostage")
+        {
             Debug.Log("Hostage entered escape zone.");
+        }     
     }
 
     private void OnTriggerExit(Collider other)

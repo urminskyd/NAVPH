@@ -66,7 +66,7 @@ public class HostageController : MonoBehaviour
 
     public void StopHostage()
     {
-        animator.SetFloat("Speed", 0);
+        animator.SetFloat("Speed", 0f);
         enabled = false;
     }
 
