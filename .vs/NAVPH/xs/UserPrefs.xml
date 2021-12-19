@@ -3,7 +3,6 @@
     <Files>
       <File FileName="Assets/UMA/Core/Extensions/DynamicCharacterSystem/Scripts/DynamicCharacterAvatar.cs" Line="142" Column="22" />
       <File FileName="Assets/Scripts/NPC/Hostage/HostageSpawn.cs" Line="18" Column="120" />
-      <File FileName="Assets/Scripts/NPC/Hostage/HostageController.cs" Line="70" Column="25" />
       <File FileName="Assets/Scripts/DoorController.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/NPC/Hostage/HostageEscapePoint.cs" Line="21" Column="6" />
       <File FileName="Assets/Scripts/GameManager.cs" Line="22" Column="1" />

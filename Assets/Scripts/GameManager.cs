@@ -13,7 +13,13 @@ public class GameManager : MonoBehaviour
     public GameObject statsPanel;
     public GameObject gamePanel;
 
-    public float timeUntillHostageDeath;
+    private float timeUntillHostageDeath;
+
+    private IDictionary<int, float> levelTime = new Dictionary<int, float>();
+    public float LevelOneTimeForHostageDie;
+    public float LevelTwoTimeForHostageDie;
+    public float LevelThreeTimeForHostageDie;
+
     public float remainingTimeInGame { get; set; }
     public bool playerIsHide { get; set; } = false;
     public bool light { get; set; } = true;
@@ -65,6 +71,10 @@ public class GameManager : MonoBehaviour
         instance = this;
         mainMenu.SetActive(true);
         remainingTimeInGame = timeUntillHostageDeath;
+
+        levelTime.Add(1, LevelOneTimeForHostageDie);
+        levelTime.Add(2, LevelTwoTimeForHostageDie);
+        levelTime.Add(3, LevelThreeTimeForHostageDie);
     }
 
     void Update()
@@ -102,11 +112,12 @@ public class GameManager : MonoBehaviour
 
     public void PlayGame(int levelNumber)
     {
-        Scene scene = SceneManager.GetActiveScene();
-        if (scene.name == "Game")
+       Scene scene = SceneManager.GetActiveScene();
+       if (scene.name == "Game")
             SceneManager.UnloadSceneAsync(scene);
 
-        currentLevel = levelNumber;
+       remainingTimeInGame = levelTime[levelNumber+1];
+       currentLevel = levelNumber;
        StartCoroutine(LoadScene("Game", levelNumber));
     }
 
