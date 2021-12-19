@@ -632,3 +632,27 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 369.903161 seconds.
+  path: Assets/Game/Prefabs/LevelObjects/Hallways/Hallway_6.prefab
+  artifactKey: Guid(d420276ce5b6d4e049c1a0ab06caf205) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Prefabs/LevelObjects/Hallways/Hallway_6.prefab using Guid(d420276ce5b6d4e049c1a0ab06caf205) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c28ece5e024502e77fc1c4fa477337c') in 0.430608 seconds 
+  Import took 0.485912 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.451358 seconds.
+  path: Assets/Game/Prefabs/LevelObjects/Hallways/Hallway_6.prefab
+  artifactKey: Guid(d420276ce5b6d4e049c1a0ab06caf205) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Prefabs/LevelObjects/Hallways/Hallway_6.prefab using Guid(d420276ce5b6d4e049c1a0ab06caf205) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b94f386ab01787d787b77c9e72b51cd3') in 0.112345 seconds 
+  Import took 0.124465 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.983831 seconds.
+  path: Assets/Game/Prefabs/Levels/Level01.prefab
+  artifactKey: Guid(9e997d9ecb92d43d1ba176d6abc46d4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Prefabs/Levels/Level01.prefab using Guid(9e997d9ecb92d43d1ba176d6abc46d4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '489479bab617761bf1320555fbec60a1') in 4.383876 seconds 
+  Import took 4.526514 seconds .
+
