@@ -2801,9 +2801,30 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "W - Forward\n\nA - Left\n\nS - Backward\n\nD - Right\n\nLeft Shift - RUN\n\nE
-    - OPEN / CLOSE DOOR\n\nF - TAKE / RELEASE HOSTAGE\n\nQ - ENABLE / DISABLE \n    
-    VERTICAL ROTATION"
+  m_text: 'W - Forward
+
+
+    A - Left
+
+
+    S - Backward
+
+
+    D - Right
+
+
+    Left
+    Shift - RUN
+
+
+    E - OPEN / CLOSE DOOR
+
+
+    F - TAKE / RELEASE HOSTAGE
+
+
+    Q
+    - SEE LEVEL FROM TOP VIEW'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bb61a1874d59d4e2daef75a879ac13ea, type: 2}
   m_sharedMaterial: {fileID: 7836338271179675351, guid: bb61a1874d59d4e2daef75a879ac13ea, type: 2}
