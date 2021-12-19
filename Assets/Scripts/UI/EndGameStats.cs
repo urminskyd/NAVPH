@@ -1,5 +1,7 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class EndGameStats : MonoBehaviour
 {
@@ -7,6 +9,7 @@ public class EndGameStats : MonoBehaviour
     public Text diedText;
     public Text totalTimeText;
     public Text titleText;
+    public GameObject nextLevelButton;
 
     private int rescued { get; set; }
     private int died { get; set; }
@@ -23,6 +26,7 @@ public class EndGameStats : MonoBehaviour
 
     public void setStatsValues(int rescued, int died, int totalTime, bool gameWin)
     {
+        nextLevelButton.SetActive(gameWin);
         title = gameWin ? "GAME WIN" : "GAME OVER";
         this.rescued = rescued;
         this.died = died;
@@ -33,5 +37,10 @@ public class EndGameStats : MonoBehaviour
     {
         Debug.Log("QUIT");
         Application.Quit();
+    }
+
+    public void NextLevel()
+    {
+        GameManager.Instance.PlayGame(GameManager.Instance.currentLevel + 1);
     }
 }

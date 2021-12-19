@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     private float totalTime = 0;
     public int dead { get; set; }
     public int rescued { get; set; }
+    public int currentLevel;
 
     public delegate void OnScoreChange();
     public event OnScoreChange scoreChanged;
@@ -101,6 +102,11 @@ public class GameManager : MonoBehaviour
 
     public void PlayGame(int levelNumber)
     {
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name == "Game")
+            SceneManager.UnloadSceneAsync(scene);
+
+        currentLevel = levelNumber;
        StartCoroutine(LoadScene("Game", levelNumber));
     }
 
