@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_2020_3_19;UNITY_2020_3;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_OSX;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_SPATIALTRACKING;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;NET_STANDARD_2_0</DefineConstants>
+    <DefineConstants>UNITY_2020_3_19;UNITY_2020_3;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;SCENE_TEMPLATE_MODULE;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_MONO_BDWGC;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_WEBGL;UNITY_WEBGL;UNITY_WEBGL_API;UNITY_DISABLE_WEB_VERIFICATION;UNITY_GFX_USE_PLATFORM_VSYNC;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_SPATIALTRACKING;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -46,154 +46,158 @@
   </PropertyGroup>
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <UnityProjectGenerator>Unity/VSTU</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.10.2.0</UnityProjectGeneratorVersion>
+    <UnityProjectGenerator>Package</UnityProjectGenerator>
+    <UnityProjectGeneratorVersion>2.0.11</UnityProjectGeneratorVersion>
     <UnityProjectType>Editor:5</UnityProjectType>
-    <UnityBuildTarget>StandaloneOSX:2</UnityBuildTarget>
+    <UnityBuildTarget>WebGL:20</UnityBuildTarget>
     <UnityVersion>2020.3.19f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
     <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\DynamicDNAPluginInspector.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UMAAssetCollectionEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\DynamicCharacterSystem\DynamicAssetLoaderEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\DictionaryCustomFormatter.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\DNAConverterFieldPropertyDrawer.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\GUIHelper.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\DynamicCharacterSystem\pWardrobeRecipeEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UMABonePoseEditorContext.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\RaceInspector.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\DynamicCharacterSystem\UmaBoneBuilderWindow.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\DynamicCharacterSystem\UMAWardrobeRecipeEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\DynamicCharacterSystem\pTextRecipeEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UmaSlotBuilderWindow.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\DynamicCharacterSystem\WardrobeRecipeListPropertyDrawer.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\DNAEvaluationGraphPropertyDrawer.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\MorphSetDnaAssetInspector.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UMAGeneratorEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UMAMaterialPropertyBlockDrawer.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\DynamicCharacterSystem\DynamicUMADnaAssetEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\DynamicCharacterSystem\DynamicUMADnaAssetPropertyDrawer.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\SlotLibraryEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UMADNAHelperTools.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\Timeline\UmaRaceClipEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UMADataEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\DynamicCharacterSystem\RaceSetterPropertyDrawer.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\DynamicDNAPluginMasterWeightDrawer.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\OverlayColorDataPropertyDrawer.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UMABonePoseMixerWindow.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\TagsEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\DynamicCharacterSystem\DynamicDnaConverterCustomizerEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\UMAPhysics\UMAPhysicsElementEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\DynamicCharacterSystem\DynamicDNAConverterBehaviourEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\ImportProcessor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\OverlayInspector.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\DNAConverterListPropertyDrawer.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\GeometryUVEditorWindow.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\BaseCharacterModifierPropertyDrawer.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\TreeViewWithTreeModel.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\DynamicCharacterSystem\DynamicCharacterAvatarEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UMAObjExporter.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\TreeElementUtility.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UMAAnimationTargetRenamer.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\DynamicCharacterSystem\IUMARecipePlugin.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\TreeElement.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\SharedColorTableEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\LegacyDynamicDNAConverterGUIDrawer.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\InspectorUtlity.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\BuildPreprocessor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UMASimpleLODEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UMASlotProcessingUtil.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\CamSaver.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\CharacterBaseEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UMABonePoseBuildWindow.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\DynamicCharacterSystem\RaceAnimatorListPropertyDrawer.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\DynamicCharacterSystem\UMADynamicCharacterAvatarRecipeEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UmaRaceUpdaterWindow.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\UMAPhysics\UMAPhysicsAvatarEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UMAClothPropertiesInspector.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UMADNAToBonePoseWindow.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\SerializedPropertyExtensions.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\TreeModel.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UMABonePoseEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\DynamicCharacterSystem\RecipeEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\UMAAssetBundleManager\AssetBundleManagerInspector.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\DynamicCharacterSystem\DynamicSlotLibraryEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\SlotDataAssetInspector.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UMAMaterialInspector.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\CachedReorderableList.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\DynamicCharacterSystem\DCARendererManagerEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UMAWebGLSetup.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\DynamicDNAConverterControllerInspector.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\UMAAssetBundleManager\AssetbundlesMenuItems.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\GeometrySelectorWindow.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\AssetIndexerWindow.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\DynamicCharacterSystem\EnumFlagsAttributeDrawer.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\OverlayDataAssetInspector.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\UMAPhysics\UMAPhysicsSlotEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\ExpressionPlayerInspector.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\TPoseExtracter.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UMAAddressablesSupport.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\DynamicCharacterSystem\UMAWardrobeCollectionEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\DNAPlugins\SkeletonDNAConverterPluginInspector.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\DynamicCharacterSystem\UMARandomizerEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\DNAEvaluationGraphPresetLibraryInspector.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\DNAEvaluatorPropertyDrawer.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UMAUpdateProcessor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\DNAEvaluationGraphPresetsPopupContent.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UMAExpressionSetInspector.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\DNAPlugins\ColorDNAConverterPropertyDrawers.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UMAGeneratorBaseEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\DynamicDNAConverterControllerPropertyDrawer.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\OverlayLibraryEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UmaTPoseInspector.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\DNARangeInspector.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\DNAEvaluatorListPropertyDrawer.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UMAGeneratorGlibEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scenes\OverlayViewerEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\DisplayListWindow.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\UMAAssetBundleManager\ReadOnlyDrawer.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\DynamicCharacterSystem\pDCSRecipeEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UMAMeshDataPropertyDrawer.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UMAGeneratorBuiltinEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\CodeGenTemplate.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UMABonePosePropertyDrawer.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UMAAvatarLoadSaveMenuItems.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UMAAssetTreeView.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\AddressablePlugins\SingleGroupGenerator.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\DynamicCharacterSystem\SkeletonModifierPropertyDrawer.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\DynamicCharacterSystem\DynamicRaceLibraryEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UMAEditorUtilities.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\MeshHideInspector.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\DynamicCharacterSystem\DynamicOverlayLibraryEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\DynamicCharacterSystem\DynamicCharacterSystemEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\Timeline\UmaColorTrackEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\IUMAAddressablePlugin.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UMABonePoseUtilities.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Extensions\Timeline\UmaWardrobeBehaviourEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UmaAboutWindow.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\UMAMountedItemEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\CreateCleanAnimationMenu.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Integrations\PowerToolsIntegration\UMALODConversionSetEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\AssetTreeElement.cs" />
-    <None Include="Assets\UMA\Core\Editor\UMA_Core_Editor.asmdef" />
-    <None Include="Assets\UMA\Core\Editor\Scripts\Templates\UmaDna_GetType_Fragment.cs.txt" />
-    <None Include="Assets\UMA\Core\Editor\Scripts\Templates\UmaDna_GetNames_Fragment.cs.txt" />
-    <None Include="Assets\UMA\Core\Editor\Scripts\Templates\UmaDnaChild_Byte_ToDna_Fragment.cs.txt" />
-    <None Include="Assets\UMA\Core\Editor\Scripts\Templates\UmaDnaChild_GetIndex_Fragment.cs.txt" />
-    <None Include="Assets\UMA\Core\Editor\Scripts\Templates\UmaDnaChild_Byte_FromDna_Fragment.cs.txt" />
-    <None Include="Assets\UMA\Core\Editor\Scripts\Templates\UmaDnaChild_GetValue_Fragment.cs.txt" />
-    <None Include="Assets\UMA\Core\Editor\Scripts\Templates\UmaDnaChild_Byte_Fields_Fragment.cs.txt" />
-    <None Include="Assets\UMA\Core\Editor\Scripts\Templates\UmaDna_Save_Fragment.cs.txt" />
-    <None Include="Assets\UMA\Core\Editor\Scripts\Templates\UmaDnaChild_Template.cs.txt" />
-    <None Include="Assets\UMA\Core\Editor\Scripts\Templates\UmaDnaChild_GetNames_Fragment.cs.txt" />
-    <None Include="Assets\UMA\Core\Editor\Scripts\Templates\UmaDna_Template.cs.txt" />
-    <None Include="Assets\UMA\Core\Editor\Scripts\Templates\UmaDnaChild_SetValue_Fragment.cs.txt" />
-    <None Include="Assets\UMA\Core\Editor\Scripts\Templates\UmaDnaChild_SetIndex_Fragment.cs.txt" />
-    <None Include="Assets\UMA\Core\Editor\Scripts\Templates\UmaDna_Load_Fragment.cs.txt" />
-    <None Include="Assets\UMA\Core\Editor\Scripts\Templates\UmaDna_GetTypes_Fragment.cs.txt" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/DynamicDNAPluginInspector.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UMAAssetCollectionEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/DynamicCharacterSystem/DynamicAssetLoaderEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/DictionaryCustomFormatter.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/DNAConverterFieldPropertyDrawer.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/GUIHelper.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/DynamicCharacterSystem/pWardrobeRecipeEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UMABonePoseEditorContext.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/RaceInspector.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/DynamicCharacterSystem/UmaBoneBuilderWindow.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/DynamicCharacterSystem/UMAWardrobeRecipeEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/DynamicCharacterSystem/pTextRecipeEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UmaSlotBuilderWindow.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/DynamicCharacterSystem/WardrobeRecipeListPropertyDrawer.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/DNAEvaluationGraphPropertyDrawer.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/MorphSetDnaAssetInspector.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UMAGeneratorEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UMAMaterialPropertyBlockDrawer.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/DynamicCharacterSystem/DynamicUMADnaAssetEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/DynamicCharacterSystem/DynamicUMADnaAssetPropertyDrawer.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/SlotLibraryEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UMADNAHelperTools.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/Timeline/UmaRaceClipEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UMADataEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/DynamicCharacterSystem/RaceSetterPropertyDrawer.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/DynamicDNAPluginMasterWeightDrawer.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/OverlayColorDataPropertyDrawer.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UMABonePoseMixerWindow.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/TagsEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/DynamicCharacterSystem/DynamicDnaConverterCustomizerEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/UMAPhysics/UMAPhysicsElementEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/DynamicCharacterSystem/DynamicDNAConverterBehaviourEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/ImportProcessor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/OverlayInspector.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/DNAConverterListPropertyDrawer.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/GeometryUVEditorWindow.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/BaseCharacterModifierPropertyDrawer.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/TreeViewWithTreeModel.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/DynamicCharacterSystem/DynamicCharacterAvatarEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UMAObjExporter.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/TreeElementUtility.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UMAAnimationTargetRenamer.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/DynamicCharacterSystem/IUMARecipePlugin.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/TreeElement.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/SharedColorTableEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/LegacyDynamicDNAConverterGUIDrawer.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/InspectorUtlity.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/BuildPreprocessor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UMASimpleLODEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UMASlotProcessingUtil.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/CamSaver.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/CharacterBaseEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UMABonePoseBuildWindow.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/DynamicCharacterSystem/RaceAnimatorListPropertyDrawer.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/DynamicCharacterSystem/UMADynamicCharacterAvatarRecipeEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UmaRaceUpdaterWindow.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/UMAPhysics/UMAPhysicsAvatarEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UMAClothPropertiesInspector.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UMADNAToBonePoseWindow.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/SerializedPropertyExtensions.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/TreeModel.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UMABonePoseEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/DynamicCharacterSystem/RecipeEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/UMAAssetBundleManager/AssetBundleManagerInspector.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/DynamicCharacterSystem/DynamicSlotLibraryEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/SlotDataAssetInspector.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UMAMaterialInspector.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/CachedReorderableList.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/DynamicCharacterSystem/DCARendererManagerEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UMAWebGLSetup.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/DynamicDNAConverterControllerInspector.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/UMAAssetBundleManager/AssetbundlesMenuItems.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/GeometrySelectorWindow.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/AssetIndexerWindow.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/DynamicCharacterSystem/EnumFlagsAttributeDrawer.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/OverlayDataAssetInspector.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/UMAPhysics/UMAPhysicsSlotEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/ExpressionPlayerInspector.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/TPoseExtracter.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UMAAddressablesSupport.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/DynamicCharacterSystem/UMAWardrobeCollectionEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/DNAPlugins/SkeletonDNAConverterPluginInspector.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/DynamicCharacterSystem/UMARandomizerEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/DNAEvaluationGraphPresetLibraryInspector.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/DNAEvaluatorPropertyDrawer.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UMAUpdateProcessor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/DNAEvaluationGraphPresetsPopupContent.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UMAExpressionSetInspector.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/DNAPlugins/ColorDNAConverterPropertyDrawers.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UMAGeneratorBaseEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/DynamicDNAConverterControllerPropertyDrawer.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/OverlayLibraryEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UmaTPoseInspector.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/DNARangeInspector.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/DNAEvaluatorListPropertyDrawer.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UMAGeneratorGlibEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scenes/OverlayViewerEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/DisplayListWindow.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/UMAAssetBundleManager/ReadOnlyDrawer.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/DynamicCharacterSystem/pDCSRecipeEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UMAMeshDataPropertyDrawer.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UMAGeneratorBuiltinEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/CodeGenTemplate.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UMABonePosePropertyDrawer.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UMAAvatarLoadSaveMenuItems.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UMAAssetTreeView.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/AddressablePlugins/SingleGroupGenerator.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/DynamicCharacterSystem/SkeletonModifierPropertyDrawer.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/DynamicCharacterSystem/DynamicRaceLibraryEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UMAEditorUtilities.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/MeshHideInspector.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/DynamicCharacterSystem/DynamicOverlayLibraryEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/DynamicCharacterSystem/DynamicCharacterSystemEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/Timeline/UmaColorTrackEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/IUMAAddressablePlugin.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UMABonePoseUtilities.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Extensions/Timeline/UmaWardrobeBehaviourEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UmaAboutWindow.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/UMAMountedItemEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/CreateCleanAnimationMenu.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Integrations/PowerToolsIntegration/UMALODConversionSetEditor.cs" />
+    <Compile Include="Assets/UMA/Core/Editor/Scripts/AssetTreeElement.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets/UMA/Core/Editor/UMA_Core_Editor.asmdef" />
+    <None Include="Assets/UMA/Core/Editor/Scripts/Templates/UmaDna_GetType_Fragment.cs.txt" />
+    <None Include="Assets/UMA/Core/Editor/Scripts/Templates/UmaDna_GetNames_Fragment.cs.txt" />
+    <None Include="Assets/UMA/Core/Editor/Scripts/Templates/UmaDnaChild_Byte_ToDna_Fragment.cs.txt" />
+    <None Include="Assets/UMA/Core/Editor/Scripts/Templates/UmaDnaChild_GetIndex_Fragment.cs.txt" />
+    <None Include="Assets/UMA/Core/Editor/Scripts/Templates/UmaDnaChild_Byte_FromDna_Fragment.cs.txt" />
+    <None Include="Assets/UMA/Core/Editor/Scripts/Templates/UmaDnaChild_GetValue_Fragment.cs.txt" />
+    <None Include="Assets/UMA/Core/Editor/Scripts/Templates/UmaDnaChild_Byte_Fields_Fragment.cs.txt" />
+    <None Include="Assets/UMA/Core/Editor/Scripts/Templates/UmaDna_Save_Fragment.cs.txt" />
+    <None Include="Assets/UMA/Core/Editor/Scripts/Templates/UmaDnaChild_Template.cs.txt" />
+    <None Include="Assets/UMA/Core/Editor/Scripts/Templates/UmaDnaChild_GetNames_Fragment.cs.txt" />
+    <None Include="Assets/UMA/Core/Editor/Scripts/Templates/UmaDna_Template.cs.txt" />
+    <None Include="Assets/UMA/Core/Editor/Scripts/Templates/UmaDnaChild_SetValue_Fragment.cs.txt" />
+    <None Include="Assets/UMA/Core/Editor/Scripts/Templates/UmaDnaChild_SetIndex_Fragment.cs.txt" />
+    <None Include="Assets/UMA/Core/Editor/Scripts/Templates/UmaDna_Load_Fragment.cs.txt" />
+    <None Include="Assets/UMA/Core/Editor/Scripts/Templates/UmaDna_GetTypes_Fragment.cs.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/2020.3.19f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -383,6 +387,9 @@
     <Reference Include="UnityEngine.VirtualTexturingModule">
       <HintPath>/Applications/Unity/Hub/Editor/2020.3.19f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VirtualTexturingModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.WebGLModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2020.3.19f1/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WebGLModule.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.WindModule">
       <HintPath>/Applications/Unity/Hub/Editor/2020.3.19f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
     </Reference>
@@ -427,6 +434,21 @@
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Plastic.Newtonsoft.Json">
+      <HintPath>Library/PackageCache/com.unity.collab-proxy@1.9.0/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Plastic.Antlr3.Runtime">
+      <HintPath>Library/PackageCache/com.unity.collab-proxy@1.9.0/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="log4netPlastic">
+      <HintPath>Library/PackageCache/com.unity.collab-proxy@1.9.0/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
+    </Reference>
+    <Reference Include="unityplastic">
+      <HintPath>Library/PackageCache/com.unity.collab-proxy@1.9.0/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>/Applications/Unity/Hub/Editor/2020.3.19f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -776,17 +798,27 @@
     <Reference Include="netstandard">
       <HintPath>/Applications/Unity/Hub/Editor/2020.3.19f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/netstandard.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TestRunner">
+      <HintPath>Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.TestRunner">
+      <HintPath>Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UMA_Core.csproj">
       <Project>{4A35B753-242F-BE3E-BBC3-77FFBCF99C2E}</Project>
       <Name>UMA_Core</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="Addressable_Editor.csproj">
       <Project>{B0AFA06A-CA56-0D66-25C1-EA03FE5043D9}</Project>
       <Name>Addressable_Editor</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
