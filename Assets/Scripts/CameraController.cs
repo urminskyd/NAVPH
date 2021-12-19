@@ -50,7 +50,7 @@ public class CameraController : MonoBehaviour
             float currentRotationAngle = transform.eulerAngles.y;
             float currentHeight = transform.position.y;
 
-            currentRotationAngle = Mathf.LerpAngle(currentRotationAngle, wantedRotationAngle, 3.0f * Time.deltaTime); // Damp the rotation around the y-axis
+            currentRotationAngle = Mathf.LerpAngle(currentRotationAngle, wantedRotationAngle, Time.deltaTime); // Damp the rotation around the y-axis
             currentHeight = Mathf.Lerp(currentHeight, wantedHeight, 2.0f * Time.deltaTime); // Damp the height
 
             var currentRotation = Quaternion.Euler(0, currentRotationAngle, 0); // Convert the angle into a rotation

@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("Backwards", Input.GetButton("Backward"));
         anim.SetBool("Run", isRunning);
 
-        transform.Rotate(0, moveHorizontal * 4, 0);
+        transform.Rotate(0, moveHorizontal * 2, 0);
         controller.Move(moveDirection * Time.deltaTime);
 
         if (moveVertical > 0)
