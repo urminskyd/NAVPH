@@ -10,6 +10,7 @@ public class StashController : MonoBehaviour
         if (other.tag == "Player")
         {
             GameManager.Instance.playerIsHide = true;
+            GameManager.Instance.light = false;
             
             //triggered = true;
             //hostageInteractPanel.SetActive(true);
@@ -21,6 +22,7 @@ public class StashController : MonoBehaviour
         if (other.tag == "Player")
         {
             GameManager.Instance.playerIsHide = false;
+            GameManager.Instance.light = true;
             //triggered = true;
             //hostageInteractPanel.SetActive(true);
         }

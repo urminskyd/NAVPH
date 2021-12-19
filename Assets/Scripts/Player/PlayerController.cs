@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
         moveVertical = Input.GetAxis("Vertical");
         isRunning = Input.GetButton("Run") && Input.GetButton("Forward");
 
-        playerLight.range = GameManager.Instance.playerIsHide ? hideRange : originalRange;
+        playerLight.range = GameManager.Instance.light ? originalRange : hideRange;
 
         moveDirection = transform.TransformDirection(new Vector3(0, 0, moveVertical));
         moveDirection *= isRunning ? runSpeed : walkSpeed;

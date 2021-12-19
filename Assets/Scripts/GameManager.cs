@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public float timeUntillHostageDeath;
     public float remainingTimeInGame { get; set; }
     public bool playerIsHide { get; set; } = false;
+    public bool light { get; set; } = true;
 
     public List<GameObject> levels;
 
